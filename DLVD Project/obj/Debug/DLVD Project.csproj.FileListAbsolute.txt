@@ -14,3 +14,5 @@ C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\BusinessLayer.dll
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\DataLayer.dll
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\BusinessLayer.pdb
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\DataLayer.pdb
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Form1.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.frmPeople.resources

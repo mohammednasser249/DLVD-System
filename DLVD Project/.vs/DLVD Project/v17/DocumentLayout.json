@@ -3,29 +3,47 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBAC49A2-77E2-4359-86F8-32EFB807B75D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\businesslayer\\clsloginbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B94E098C-31AA-4919-8EA2-939B10C61D1B}|..\\DataLayer\\DataLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\datalayer\\clslogindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B94E098C-31AA-4919-8EA2-939B10C61D1B}|..\\DataLayer\\DataLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\datalayer\\clsdatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B94E098C-31AA-4919-8EA2-939B10C61D1B}|..\\DataLayer\\DataLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\datalayer\\clsdatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B94E098C-31AA-4919-8EA2-939B10C61D1B}|..\\DataLayer\\DataLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\datalayer\\clspeopledl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBAC49A2-77E2-4359-86F8-32EFB807B75D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\businesslayer\\clspeoplebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmlong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBAC49A2-77E2-4359-86F8-32EFB807B75D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\businesslayer\\clsloginbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B94E098C-31AA-4919-8EA2-939B10C61D1B}|..\\DataLayer\\DataLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\datalayer\\clslogindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,7 +57,19 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "frmPeople.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmPeople.cs",
+              "RelativeDocumentMoniker": "frmPeople.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmPeople.cs [Design]",
+              "RelativeToolTip": "frmPeople.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:21:31.848Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "clsLoginDL.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DataLayer\\clsLoginDL.cs",
               "RelativeDocumentMoniker": "..\\DataLayer\\clsLoginDL.cs",
@@ -47,12 +77,11 @@
               "RelativeToolTip": "..\\DataLayer\\clsLoginDL.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAYwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:29:41.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T18:29:41.416Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "clsDatabaseSettings.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DataLayer\\clsDatabaseSettings.cs",
               "RelativeDocumentMoniker": "..\\DataLayer\\clsDatabaseSettings.cs",
@@ -65,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "clsLoginBl.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\BusinessLayer\\clsLoginBl.cs",
               "RelativeDocumentMoniker": "..\\BusinessLayer\\clsLoginBl.cs",
@@ -73,25 +102,88 @@
               "RelativeToolTip": "..\\BusinessLayer\\clsLoginBl.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAAAA4AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:25:58.658Z",
+              "WhenOpened": "2025-06-09T18:25:58.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T17:20:53.365Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmPeople.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmPeople.cs",
+              "RelativeDocumentMoniker": "frmPeople.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmPeople.cs",
+              "RelativeToolTip": "frmPeople.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAgwDcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:36:11.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAewBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:25:06.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "clsPeopleDL.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DataLayer\\clsPeopleDL.cs",
+              "RelativeDocumentMoniker": "..\\DataLayer\\clsPeopleDL.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DataLayer\\clsPeopleDL.cs",
+              "RelativeToolTip": "..\\DataLayer\\clsPeopleDL.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAewDEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:30:30.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsPeopleBL.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\BusinessLayer\\clsPeopleBL.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsPeopleBL.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\BusinessLayer\\clsPeopleBL.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsPeopleBL.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAowB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:31:10.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "frmLong.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmLong.cs",
               "RelativeDocumentMoniker": "frmLong.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmLong.cs",
               "RelativeToolTip": "frmLong.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwCcAAABLAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAWwCQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T18:19:55.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -104,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "frmLong.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmLong.cs",
               "RelativeDocumentMoniker": "frmLong.cs",
@@ -112,18 +204,6 @@
               "RelativeToolTip": "frmLong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T17:22:59.16Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T17:20:53.365Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="clsDatabaseSettings.cs" />
     <Compile Include="clsLoginDL.cs" />
+    <Compile Include="clsPeopleDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

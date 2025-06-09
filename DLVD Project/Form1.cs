@@ -16,5 +16,11 @@ namespace DLVD_Project
         {
             InitializeComponent();
         }
+
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPeople frm = new frmPeople();
+            frm.ShowDialog();
+        }
     }
 }

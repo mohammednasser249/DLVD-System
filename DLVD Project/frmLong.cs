@@ -34,6 +34,7 @@ namespace DLVD_Project
             {
                 Form1 frm = new Form1();
                 frm.ShowDialog();
+                this.Close();
 
             }else
             {
