@@ -1,0 +1,16 @@
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\DLVD Project.exe.config
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\DLVD Project.exe
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\DLVD Project.pdb
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\Guna.UI2.dll
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD Project.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.frmLong.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Properties.Resources.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD Project.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD Project.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD Pro.614808AD.Up2Date
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD Project.exe
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD Project.pdb
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\BusinessLayer.dll
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\DataLayer.dll
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\BusinessLayer.pdb
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\bin\Debug\DataLayer.pdb

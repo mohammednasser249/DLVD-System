@@ -1,0 +1,9 @@
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Asus\Desktop\Projects\DLVD\BusinessLayer\obj\Debug\BusinessLayer.pdb
