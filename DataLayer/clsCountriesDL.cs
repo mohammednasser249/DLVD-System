@@ -31,9 +31,9 @@ namespace DataLayer
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.HasRows)
+                if (reader.Read())
                 {
-                    CountryName = (string)(reader["CountryName"]);
+                    CountryName = reader["CountryName"].ToString();
                     isfound = true;
                 }
             }

@@ -109,6 +109,16 @@ namespace DLVD_Project
         {
             frmAddPeople frm = new frmAddPeople();
             frm.ShowDialog();
+            _GetAllPeople();
+
+
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value); // Get the id of the person i chose 
+            frmShowDetails frm = new frmShowDetails(id);
+            frm.ShowDialog();
         }
     }
 }

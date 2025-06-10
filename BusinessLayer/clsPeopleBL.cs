@@ -39,7 +39,7 @@ namespace BusinessLayer
         // Parametrized Constructor 
 
         public clsPeopleBL(int id, string nationalNo, string firstName, string secondName,
-          string thirdName, string lastName, int gender,string Address, DateTime dob,
+          string thirdName, string lastName, int gender,string address, DateTime dob,
            string phone, string email,int nationalityCountryID,string imagePath)
         {
             ID = id;
@@ -47,6 +47,7 @@ namespace BusinessLayer
             FirstName = firstName;
             SecondName = secondName;
             ThirdName = thirdName;
+            Address = address;
             LastName = lastName;
             Gender = gender;
             ImagePath = imagePath;
@@ -57,7 +58,7 @@ namespace BusinessLayer
             _Mode = enMode.Update;
         }
 
-
+        // Default Constructor 
         public clsPeopleBL()
         {
             ID = 0;
@@ -76,6 +77,32 @@ namespace BusinessLayer
             _Mode = enMode.AddNew;
         }
 
+        // Functions 
+
+        public static clsPeopleBL FindPerson(int ID)
+        {
+            string FirstName = "";
+            string SecondName = "";
+            string ThirdName = "";
+            string LastName = "";
+            string NationalNo = "";
+            int Gender = -1;
+            DateTime DOB = new DateTime();
+            string Phone = "";
+            string Email = "";
+            string Address = "";
+            int NationalityCountryID = -1;
+            string ImagePath = "";
+
+            if (clsPeopleDL.FindPersonDL(ID, ref NationalNo, ref FirstName, ref SecondName, ref ThirdName,
+                                ref LastName, ref Gender, ref Address, ref DOB,
+                                ref Phone, ref Email, ref NationalityCountryID, ref ImagePath))
+            {
+                return new clsPeopleBL(ID, NationalNo, FirstName, SecondName, ThirdName, LastName,Gender ,Address,DOB, Phone, Email, NationalityCountryID, ImagePath);
+            }else
+                return null;
+
+        }
 
         public static DataTable GetAllPeople()
         {

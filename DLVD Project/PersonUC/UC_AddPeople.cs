@@ -26,6 +26,11 @@ namespace DLVD_Project.PersonUC
 
         clsPeopleBL Person;
 
+        public UC_AddPeople()
+        {
+            InitializeComponent(); // This is required for the designer to work
+        }
+
         public UC_AddPeople(int ID)
         {
             InitializeComponent();
@@ -47,11 +52,18 @@ namespace DLVD_Project.PersonUC
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    // Dispose previous image to avoid memory leak
+                    if (pictureBox1.Image != null)
+                    {
+                        pictureBox1.Image.Dispose();
+                    }
+
                     pictureBox1.Image = new Bitmap(ofd.FileName);
-                    ImagePath = ofd.FileName;   
+                    ImagePath = ofd.FileName;
                 }
             }
         }
+
 
 
         // LoadDataFunction
@@ -150,6 +162,7 @@ namespace DLVD_Project.PersonUC
             if (Person.Save())
             {
                 MessageBox.Show("Person Saved Succssfully");
+                lbPersonID.Text=Person.ID.ToString();
             }else
             {
                 MessageBox.Show("Person Failed to be save");
@@ -160,6 +173,11 @@ namespace DLVD_Project.PersonUC
         }
 
         private void cmCountries_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

@@ -17,20 +17,14 @@ namespace DLVD_Project
         {
             InitializeComponent();
         }
-
-      
-
         private void uC_AddPeople1_Load(object sender, EventArgs e)
         {
             UC_AddPeople us = new UC_AddPeople(-1);
 
         }
-
         private void frmAddPeople_Load(object sender, EventArgs e)
         {
 
         }
-
-        
     }
 }

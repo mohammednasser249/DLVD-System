@@ -112,5 +112,61 @@ namespace DataLayer
 
         }
 
+
+
+        public static bool FindPersonDL(int ID,ref string NationalNo, ref string FirstName,ref string SecondName,
+          ref string ThirdName, ref string LastName, ref int Gender, ref string Address, ref DateTime DateOfBirth,
+          ref  string Phone, ref string Email, ref int NationalityCountryID,ref string ImagePath)
+        {
+
+
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string query = @"
+            SELECT NationalNo, FirstName, SecondName, ThirdName, LastName, Gendor, Address, 
+                   DateOfBirth, Phone, Email, NationalityCountryID, ImagePath
+            FROM People
+            WHERE PersonID = @ID";
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@ID", ID);
+
+            bool IsFound = false;
+            try
+            {
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    NationalNo = reader["NationalNo"]?.ToString();
+                    FirstName = reader["FirstName"]?.ToString();
+                    SecondName = reader["SecondName"]?.ToString();
+                    ThirdName = reader["ThirdName"]?.ToString();
+                    LastName = reader["LastName"]?.ToString();
+                    Gender = Convert.ToInt32(reader["Gendor"]);
+                    Address = reader["Address"]?.ToString();
+                    DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]);
+                    Phone = reader["Phone"]?.ToString();
+                    Email = reader["Email"]?.ToString();
+                    NationalityCountryID = Convert.ToInt32(reader["NationalityCountryID"]);
+                    ImagePath = reader["ImagePath"]?.ToString();
+                    IsFound = true;
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return IsFound;
+
+
+            }
     }
 }
