@@ -104,5 +104,11 @@ namespace DLVD_Project
             }
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmAddPeople frm = new frmAddPeople();
+            frm.ShowDialog();
+        }
     }
 }
