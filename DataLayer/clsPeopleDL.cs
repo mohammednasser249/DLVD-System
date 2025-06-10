@@ -19,9 +19,15 @@ namespace DataLayer
 
             SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
 
-            string qurey = @"select P.PersonID , P.NationalNo,P.FirstName,P.SecondName,P.ThirdName,P.LastName,P.Gendor,C.CountryName,P.Phone,P.Email
-                                from People P , Countries C
-                                where P.NationalityCountryID=C.CountryID";
+            string qurey = @"select P.PersonID , P.NationalNo,P.FirstName,P.SecondName,P.ThirdName,P.LastName,Gender =
+
+                                Case 
+                                when P.Gendor =0 then 'Male'
+                                else 'Female'
+                                End 
+                                ,C.CountryName,P.Phone,P.Email
+                                 from People P , Countries C
+                            where P.NationalityCountryID=C.CountryID";
 
             SqlCommand cmd = new SqlCommand(qurey, conn);
 

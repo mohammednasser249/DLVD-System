@@ -58,7 +58,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(545, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 51);
+            this.label1.Size = new System.Drawing.Size(357, 49);
             this.label1.TabIndex = 1;
             this.label1.Text = "Manage People";
             // 
@@ -122,6 +122,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(203, 25);
             this.txtSearch.TabIndex = 7;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // frmPeople
             // 
