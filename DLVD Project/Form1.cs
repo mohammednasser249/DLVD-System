@@ -22,5 +22,11 @@ namespace DLVD_Project
             frmPeople frm = new frmPeople();
             frm.ShowDialog();
         }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsers frm = new frmUsers();
+            frm.ShowDialog();
+        }
     }
 }
