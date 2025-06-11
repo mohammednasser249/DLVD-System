@@ -136,5 +136,26 @@ namespace DLVD_Project
             frm.ShowDialog();
             _GetAllPeople();
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if(MessageBox.Show("Are you sure you want to delete this person ? ","Confirm deletion", MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value); // Get the id of the person i chose 
+
+                if(clsPeopleBL.DeleteBL(id))
+                {
+                    MessageBox.Show("Person was deleted succussfully ");
+                    _GetAllPeople();
+                }else
+                    MessageBox.Show("Person failed to be deleted  ");
+
+
+            }
+        }
+
+
+
     }
 }

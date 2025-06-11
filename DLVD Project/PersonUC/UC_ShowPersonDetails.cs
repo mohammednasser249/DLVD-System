@@ -59,7 +59,17 @@ namespace DLVD_Project.PersonUC
                         pbPersonalPhoto.Image.Dispose();
                     }
 
-                    pbPersonalPhoto.Image = new Bitmap(Person.ImagePath);
+                    if (!string.IsNullOrWhiteSpace(Person.ImagePath))
+                    {
+                        pbPersonalPhoto.Image = new Bitmap(Person.ImagePath);
+                    }
+                    else
+                    {
+                        // Optionally set a default image or clear the PictureBox
+                        pbPersonalPhoto.Image = null;
+                        // or use a placeholder image:
+                        // pbPersonalPhoto.Image = Properties.Resources.PlaceholderImage;
+                    }
                 }
 
                 if (Person.Gender == 0)

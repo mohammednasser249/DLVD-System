@@ -11,6 +11,43 @@ namespace DataLayer
     public class clsPeopleDL
     {
 
+        public static bool DeletePersonDl(int ID)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string qurey = @"delete from People
+          where PersonID =@ID ";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+
+            cmd.Parameters.AddWithValue("@ID", ID);
+            bool isdeleted = false;
+
+            try
+            {
+                conn.Open();
+                int rowsaffected = cmd.ExecuteNonQuery();
+
+                if (rowsaffected > 0)
+                {
+                    isdeleted = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return isdeleted;
+
+
+
+        }
+
 
         public static DataTable GetAllPeopleDL()
         {
@@ -237,4 +274,7 @@ namespace DataLayer
 
             }
     }
+
+
+
 }

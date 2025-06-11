@@ -130,6 +130,16 @@ namespace BusinessLayer
 
         }
 
+        // Delete Function 
+
+        public static bool DeleteBL(int Id)
+        {
+            if (clsPeopleDL.DeletePersonDl(Id))
+                return true;
+            else
+                return false;
+        }
+
         public bool Save()
         {
 
