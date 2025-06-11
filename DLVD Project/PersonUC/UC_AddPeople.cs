@@ -104,10 +104,7 @@ namespace DLVD_Project.PersonUC
 
     
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
@@ -133,7 +130,17 @@ namespace DLVD_Project.PersonUC
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if(Person ==null)
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                // All fields valid, proceed
+                MessageBox.Show("All inputs are valid!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+                return;
+
+
+            if (Person ==null)
             {
                 MessageBox.Show("Error the object is null");
                 return;
@@ -181,5 +188,149 @@ namespace DLVD_Project.PersonUC
         {
 
         }
+
+        private void txtFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtFirstName.Text))
+            {
+                e.Cancel = true;    
+                txtFirstName.Focus();
+                errorProvider1.SetError(txtFirstName, "Please enter your FirstName! ");
+            }
+            else
+            {
+                e.Cancel=false;
+                errorProvider1.SetError(txtFirstName, null);
+            }
+        }
+
+        private void txtSecondName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSecondName.Text))
+            {
+                e.Cancel = true;
+                txtSecondName.Focus();
+                errorProvider1.SetError(txtSecondName, "Please enter your txtSecondName! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtSecondName, null);
+            }
+        }
+
+        private void txtThirdName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtThirdName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtThirdName.Text))
+            {
+                e.Cancel = true;
+                txtThirdName.Focus();
+                errorProvider1.SetError(txtThirdName, "Please enter your SecondName! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtThirdName, null);
+            }
+
+        }
+
+        private void txtLastName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtLastName.Text))
+            {
+                e.Cancel = true;
+                txtLastName.Focus();
+                errorProvider1.SetError(txtLastName, "Please enter your LastName! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtLastName, null);
+            }
+        }
+
+        private void txtNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(txtNationalNo.Text))
+            {
+                e.Cancel = true;
+                txtNationalNo.Focus();
+                errorProvider1.SetError(txtNationalNo, "Please enter your NationalNo! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtNationalNo, null);
+            }
+        }
+
+        private void panel2_Validating(object sender, CancelEventArgs e)
+        {
+            if (!rdMale.Checked && !rdFemale.Checked)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(panel2, "Please select a gender.");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(panel2, "");
+            }
+
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                e.Cancel = true;
+                txtEmail.Focus();
+                errorProvider1.SetError(txtEmail, "Please enter your Email! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtEmail, null);
+            }
+        }
+
+        private void txtAddress_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtAddress.Text))
+            {
+                e.Cancel = true;
+                txtAddress.Focus();
+                errorProvider1.SetError(txtAddress, "Please enter your Address! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtAddress, null);
+            }
+        }
+
+        private void txtPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPhone.Text))
+            {
+                e.Cancel = true;
+                txtPhone.Focus();
+                errorProvider1.SetError(txtPhone, "Please enter your Phone! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPhone, null);
+            }
+        }
+
+      
     }
 }

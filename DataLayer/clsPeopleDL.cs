@@ -85,7 +85,11 @@ namespace DataLayer
             cmd.Parameters.AddWithValue("@Phone", Phone);
             cmd.Parameters.AddWithValue("@Email", Email);
             cmd.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
-            cmd.Parameters.AddWithValue("@ImagePath", ImagePath);
+            if (ImagePath != null)
+                cmd.Parameters.AddWithValue("@ImagePath", ImagePath);
+            else
+                cmd.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+
 
             bool IsAdded = false;
             try
