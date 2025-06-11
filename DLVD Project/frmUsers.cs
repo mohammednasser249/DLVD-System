@@ -51,7 +51,7 @@ namespace DLVD_Project
 
         private void frmUsers_Load(object sender, EventArgs e)
         {
-            _FillSearchComboBox();
+             _FillSearchComboBox();
             _GetAllUsers(); 
         }
 

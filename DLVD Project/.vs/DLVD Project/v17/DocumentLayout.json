@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,18 +15,18 @@
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBAC49A2-77E2-4359-86F8-32EFB807B75D}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\businesslayer\\clsuserbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:frmusers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|c:\\users\\asus\\desktop\\projects\\dlvd\\dlvd project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFFC7152-CA10-4E9A-BF4A-CCE22A3C62E5}|DLVD Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -128,8 +128,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAowBwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T19:59:18.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T19:59:18.021Z"
             },
             {
               "$type": "Document",
@@ -139,7 +138,7 @@
               "RelativeDocumentMoniker": "frmUsers.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmUsers.cs",
               "RelativeToolTip": "frmUsers.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAkwDUAAAAMAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAD4vzUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T19:58:08.386Z",
               "EditorCaption": ""
@@ -165,8 +164,7 @@
               "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\frmPeople.cs [Design]",
               "RelativeToolTip": "frmPeople.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T20:21:31.848Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-09T20:21:31.848Z"
             },
             {
               "$type": "Document",
@@ -178,8 +176,7 @@
               "RelativeToolTip": "frmPeople.cs",
               "ViewState": "AQIAAGMAAAAAAAAAAAAYwGsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T10:09:02.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T10:09:02.136Z"
             },
             {
               "$type": "Document",
@@ -204,8 +201,7 @@
               "RelativeToolTip": "..\\BusinessLayer\\clsUserBL.cs",
               "ViewState": "AQIAAC4AAAAAAAAAAAAxwEIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T19:45:40.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T19:45:40.314Z"
             },
             {
               "$type": "Document",
@@ -216,8 +212,7 @@
               "ToolTip": "C:\\Users\\Asus\\Desktop\\Projects\\DLVD\\DLVD Project\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T17:20:53.365Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-09T17:20:53.365Z"
             },
             {
               "$type": "Document",
@@ -240,8 +235,7 @@
               "RelativeToolTip": "..\\DataLayer\\clsUserDL.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAgwA8AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T19:51:28.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T19:51:28.786Z"
             },
             {
               "$type": "Document",
@@ -253,8 +247,7 @@
               "RelativeToolTip": "..\\DataLayer\\clsPeopleDL.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAxwF0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T20:30:30.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T20:30:30.799Z"
             },
             {
               "$type": "Document",
