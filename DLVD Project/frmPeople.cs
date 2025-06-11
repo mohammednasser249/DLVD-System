@@ -108,6 +108,7 @@ namespace DLVD_Project
             if(cbFilter.SelectedIndex != 0)
             {
                 _GetSearch(cbFilter.SelectedItem.ToString(), txtSearch.Text);
+                lbNumberOfRecrods.Text = dataGridView1.RowCount.ToString(); // Get number of rows 
 
             }
 

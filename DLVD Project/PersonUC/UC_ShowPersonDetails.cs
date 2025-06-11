@@ -96,5 +96,11 @@ namespace DLVD_Project.PersonUC
 
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddPeople frm = new frmAddPeople(PersonID);
+            frm.ShowDialog();
+        }
     }
 }
