@@ -28,6 +28,14 @@ namespace DLVD_Project
             // Store the datatable in a grid view to display 
             dataGridView1.DataSource = dt;
             lbNumberOfRecrods.Text=dataGridView1.RowCount.ToString(); // Get number of rows 
+          
+
+        }
+
+        private void _FillSearchComboBox()
+        {
+            dt = clsPeopleBL.GetAllPeople();
+
             // Add first none to the combobox 
             cbFilter.Items.Add("None");
             cbFilter.SelectedIndex = 0;
@@ -37,9 +45,7 @@ namespace DLVD_Project
                 cbFilter.Items.Add(column.ColumnName);
 
             }
-
         }
-
 
         // A function for researching when the textbox is changed 
         private void _GetSearch(string FilterName, string FilterText)
@@ -78,6 +84,7 @@ namespace DLVD_Project
 
         private void frmPeople_Load(object sender, EventArgs e)
         {
+            _FillSearchComboBox();
             _GetAllPeople();
         }
 
