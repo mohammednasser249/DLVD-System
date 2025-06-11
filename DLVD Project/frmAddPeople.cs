@@ -13,18 +13,29 @@ namespace DLVD_Project
 {
     public partial class frmAddPeople : Form
     {
-        public frmAddPeople()
+        int PersonId = 0;
+        public frmAddPeople(int personId)
         {
             InitializeComponent();
-        }
-        private void uC_AddPeople1_Load(object sender, EventArgs e)
-        {
-            UC_AddPeople us = new UC_AddPeople(-1);
+            PersonId = personId;
+            if (PersonId != 0 && PersonId != -1)  // Check for valid ID
+            {
+                uC_AddPeople1.LoadPerson(PersonId);
+            }
+            else
+            {
+                // If adding new person, you can still call LoadPerson with -1 or handle accordingly
+                uC_AddPeople1.LoadPerson(-1);
+            }
+
 
         }
+
         private void frmAddPeople_Load(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

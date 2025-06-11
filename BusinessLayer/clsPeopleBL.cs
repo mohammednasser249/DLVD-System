@@ -119,6 +119,16 @@ namespace BusinessLayer
           return false;
         }
 
+        // Update Function 
+        private bool _UpdatePersonBL()
+        {
+            if(clsPeopleDL.UpdatePersonDL(this.ID, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.Gender, this.Address, this.DOB, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath))
+            {
+                return true;
+            }else
+                return false;
+
+        }
 
         public bool Save()
         {
@@ -132,6 +142,8 @@ namespace BusinessLayer
                         return true;
                     }
                     break;
+                    case enMode.Update:
+                    return _UpdatePersonBL();
 
             }
             return false;

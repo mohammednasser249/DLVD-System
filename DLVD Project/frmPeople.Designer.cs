@@ -41,6 +41,13 @@
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -88,14 +95,22 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDetailsToolStripMenuItem});
+            this.showDetailsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.addNewToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.sendEmailToolStripMenuItem,
+            this.phoneCallToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 200);
             // 
             // showDetailsToolStripMenuItem
             // 
+            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
@@ -158,6 +173,53 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(211, 6);
+            // 
+            // addNewToolStripMenuItem
+            // 
+            this.addNewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewToolStripMenuItem.Image")));
+            this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.addNewToolStripMenuItem.Text = "Add New Person";
+            this.addNewToolStripMenuItem.Click += new System.EventHandler(this.addNewToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(211, 6);
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
+            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.sendEmailToolStripMenuItem.Text = "Send Email";
+            // 
+            // phoneCallToolStripMenuItem
+            // 
+            this.phoneCallToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("phoneCallToolStripMenuItem.Image")));
+            this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.phoneCallToolStripMenuItem.Text = "Phone Call";
+            // 
             // frmPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -198,5 +260,12 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addNewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
     }
 }

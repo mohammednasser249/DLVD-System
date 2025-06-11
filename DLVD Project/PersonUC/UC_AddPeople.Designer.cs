@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_AddPeople));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbPersonID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -88,16 +88,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(393, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add New People";
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.ForeColor = System.Drawing.Color.Red;
+            this.lbTitle.Location = new System.Drawing.Point(393, 26);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(285, 39);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "Add New People";
             // 
             // label2
             // 
@@ -553,7 +553,7 @@
             this.Controls.Add(this.lbPersonID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbTitle);
             this.Name = "UC_AddPeople";
             this.Size = new System.Drawing.Size(1121, 529);
             this.Load += new System.EventHandler(this.UC_AddPeople_Load);
@@ -579,7 +579,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbPersonID;
         private System.Windows.Forms.Label label4;

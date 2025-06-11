@@ -116,6 +116,70 @@ namespace DataLayer
 
         }
 
+        public static bool UpdatePersonDL(int PersonID, string NationalNo, string FirstName, string SecondName,
+            string ThirdName, string LastName, int Gender, string Address, DateTime DateOfBirth,
+            string Phone, string Email, int NationalityCountryID, string ImagePath)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string query = @"
+        UPDATE People SET
+            NationalNo = @NationalNo,
+            FirstName = @FirstName,
+            SecondName = @SecondName,
+            ThirdName = @ThirdName,
+            LastName = @LastName,
+            DateOfBirth = @DateOfBirth,
+            Gendor = @Gender,
+            Address = @Address,
+            Phone = @Phone,
+            Email = @Email,
+            NationalityCountryID = @NationalityCountryID,
+            ImagePath = @ImagePath
+        WHERE PersonID = @PersonID";  
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            //Add parameters
+            cmd.Parameters.AddWithValue("@NationalNo", NationalNo);
+            cmd.Parameters.AddWithValue("@FirstName", FirstName);
+            cmd.Parameters.AddWithValue("@SecondName", SecondName);
+            cmd.Parameters.AddWithValue("@ThirdName", ThirdName);
+            cmd.Parameters.AddWithValue("@LastName", LastName);
+            cmd.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+            cmd.Parameters.AddWithValue("@Gender", Gender);
+            cmd.Parameters.AddWithValue("@Address", Address);
+            cmd.Parameters.AddWithValue("@Phone", Phone);
+            cmd.Parameters.AddWithValue("@Email", Email);
+            cmd.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
+
+            if (ImagePath != null)
+                cmd.Parameters.AddWithValue("@ImagePath", ImagePath);
+            else
+                cmd.Parameters.AddWithValue("@ImagePath", DBNull.Value);
+
+            cmd.Parameters.AddWithValue("@PersonID", PersonID);
+
+            bool IsUpdated = false;
+            try
+            {
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                    IsUpdated = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return IsUpdated;
+        }
+
 
 
         public static bool FindPersonDL(int ID,ref string NationalNo, ref string FirstName,ref string SecondName,

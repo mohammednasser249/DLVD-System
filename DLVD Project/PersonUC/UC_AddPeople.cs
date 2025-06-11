@@ -34,12 +34,8 @@ namespace DLVD_Project.PersonUC
         public UC_AddPeople(int ID)
         {
             InitializeComponent();
-            _PersonID = ID;
-            if(_PersonID==-1)
-            {
-                _Mode = enMode.AddNew;
-            }else
-                _Mode = enMode.UpdateNew;
+           
+
         }
 
         // Set a photo function 
@@ -65,19 +61,60 @@ namespace DLVD_Project.PersonUC
         }
 
 
+        
+
 
         // LoadDataFunction
         private void _LoadData()
         {
+            
 
             if (_Mode == enMode.AddNew)
             {
                 Person = new clsPeopleBL(); // create new object to fill it later 
                 _Mode = enMode.UpdateNew;
+                lbTitle.Text = "Add New Person";
                 return;
             }
 
+            // Edit mode 
 
+            // Find the person by its ID to display its info 
+
+            Person = clsPeopleBL.FindPerson(_PersonID);
+            // Check if person exist 
+            if (Person == null)
+            {
+                MessageBox.Show("Person was not found ");
+                return;
+            }
+            lbTitle.Text = "Update Person";
+            
+
+            //Filling the data 
+
+           lbPersonID.Text = Person.ID.ToString();
+            txtFirstName.Text = Person.FirstName;
+            txtSecondName.Text = Person.SecondName;
+            txtThirdName.Text = Person.ThirdName;
+            txtLastName.Text = Person.LastName;
+
+            if (Person.Gender == 0)
+                rdMale.Checked = true;
+            else
+                rdFemale.Checked = true;
+
+            txtAddress.Text = Person.Address;
+            txtNationalNo.Text = Person.NationalNo;
+            txtEmail.Text = Person.Email;
+            txtPhone.Text = Person.Phone;
+            dateTimePicker1.Value = Person.DOB;
+
+            clsCountriesBL Country = clsCountriesBL.FindCountry(Person.NationalityCountryID);
+            cbCountries.SelectedItem = Country.CountryName;
+
+            ImagePath = Person.ImagePath;
+            pictureBox1.ImageLocation = ImagePath;
 
         }
 
@@ -96,10 +133,25 @@ namespace DLVD_Project.PersonUC
         }
 
 
+        public void LoadPerson(int id)
+        {
+            _PersonID = id;
+            if (_PersonID == -1)
+            {
+                _Mode = enMode.AddNew;
+            }
+            else
+                _Mode = enMode.UpdateNew;// Set mode to update
+            _LoadData();               // Load data based on _PersonID
+        }
+
+
+
         private void UC_AddPeople_Load(object sender, EventArgs e)
         {
+
             _LoadCountriesToComboBox();
-            _LoadData();
+           // _LoadData();
         }
 
     
@@ -145,7 +197,6 @@ namespace DLVD_Project.PersonUC
                 MessageBox.Show("Error the object is null");
                 return;
             }
-
             Person.FirstName = txtFirstName.Text;
             Person.SecondName = txtSecondName.Text;
             Person.ThirdName = txtThirdName.Text;
@@ -170,13 +221,14 @@ namespace DLVD_Project.PersonUC
             {
                 MessageBox.Show("Person Saved Succssfully");
                 lbPersonID.Text=Person.ID.ToString();
+                lbTitle.Text = "Update Person";
+                lbPersonID.Text = Person.ID.ToString();
+
             }else
             {
                 MessageBox.Show("Person Failed to be save");
 
             }
-
-
         }
 
         private void cmCountries_SelectedIndexChanged(object sender, EventArgs e)

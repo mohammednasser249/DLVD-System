@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using DLVD_Project.PersonUC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,7 +108,7 @@ namespace DLVD_Project
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            frmAddPeople frm = new frmAddPeople();
+            frmAddPeople frm = new frmAddPeople(-1);
             frm.ShowDialog();
             _GetAllPeople();
 
@@ -119,6 +120,21 @@ namespace DLVD_Project
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value); // Get the id of the person i chose 
             frmShowDetails frm = new frmShowDetails(id);
             frm.ShowDialog();
+        }
+
+        private void addNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddPeople frm = new frmAddPeople(-1);
+            frm.ShowDialog();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value); // Get the id of the person i chose 
+
+            frmAddPeople frm = new frmAddPeople(id);
+            frm.ShowDialog();
+            _GetAllPeople();
         }
     }
 }
