@@ -89,5 +89,39 @@ namespace DataLayer
 
         }
 
+
+        public static bool DeleteUser(int UserID)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string qurey = @"delete from Users Where UserID =@UserID";
+
+            SqlCommand cmd = new SqlCommand(qurey,conn);
+            cmd.Parameters.AddWithValue("@UserID", UserID);
+
+            bool isdeleted = false;
+            try
+            {
+                conn.Open();
+                int rowsaffected = cmd.ExecuteNonQuery();
+                if (rowsaffected > 0)
+                {
+                    isdeleted = true;
+                }
+
+            }catch (Exception ex)
+            {
+
+            Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isdeleted;
+        }
+
+
+      
     }
 }

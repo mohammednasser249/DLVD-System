@@ -125,5 +125,20 @@ namespace DLVD_Project
         {
             this.Close();
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Confimation", "Are you sure you want to delete this user ? ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (clsUserBL.DeleteUserBL((int)dataGridView1.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("User has been deleted succussfully");
+                    _GetAllUsers();
+                }
+                else
+                    MessageBox.Show("User was not deleted succssfully");
+
+            }
+        }
     }
 }

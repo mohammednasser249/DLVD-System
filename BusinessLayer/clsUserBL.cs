@@ -73,6 +73,12 @@ namespace BusinessLayer
                 return  false;
         }
 
+        // Delete Users 
+
+        public static bool DeleteUserBL(int userid)
+        {
+          return  clsUserDL.DeleteUser(userid);
+        }
 
         public int Save()
         {
