@@ -68,6 +68,12 @@
     <Compile Include="frmAddPeople.Designer.cs">
       <DependentUpon>frmAddPeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForms\frmAddUsersMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmAddUsersMDI.Designer.cs">
+      <DependentUpon>frmAddUsersMDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,10 +92,10 @@
     <Compile Include="frmShowDetails.Designer.cs">
       <DependentUpon>frmShowDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUsers.cs">
+    <Compile Include="UserForms\frmUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUsers.Designer.cs">
+    <Compile Include="UserForms\frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonUC\UC_AddPeople.cs">
@@ -106,11 +112,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserUC\UCAddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUC\UCAddUser.Designer.cs">
+      <DependentUpon>UCAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUC\UCLoginInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUC\UCLoginInfo.Designer.cs">
+      <DependentUpon>UCLoginInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddPeople.resx">
       <DependentUpon>frmAddPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmAddUsersMDI.resx">
+      <DependentUpon>frmAddUsersMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLong.resx">
       <DependentUpon>frmLong.cs</DependentUpon>
@@ -121,7 +142,7 @@
     <EmbeddedResource Include="frmShowDetails.resx">
       <DependentUpon>frmShowDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUsers.resx">
+    <EmbeddedResource Include="UserForms\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonUC\UC_AddPeople.resx">
@@ -139,6 +160,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserUC\UCAddUser.resx">
+      <DependentUpon>UCAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUC\UCLoginInfo.resx">
+      <DependentUpon>UCLoginInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,8 +186,6 @@
       <Name>BusinessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserUC\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

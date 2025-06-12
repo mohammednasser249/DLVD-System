@@ -18,7 +18,7 @@ namespace BusinessLayer
             Update
         }
 
-        enMode _Mode;
+        private enMode _Mode;
 
         public int UserID { get; set; }
         public int  PersonID { get; set; }
@@ -31,7 +31,7 @@ namespace BusinessLayer
 
         // Defalut constructor 
 
-        clsUserBL()
+        public clsUserBL()
         {
             UserID = 0;
             PersonID = 0;
@@ -63,6 +63,34 @@ namespace BusinessLayer
 
         }
 
+        // Add new user funciton 
+
+        private  bool _AddNewUser()
+        {
+           if( clsUserDL.AddNewUserDL(this.PersonID, this.UserName, this.Password, this.isActive)!=0)
+                return true;
+           else 
+                return  false;
+        }
+
+
+        public bool Save()
+        {
+            switch(_Mode)
+            {
+               case enMode.AddNew:
+                    if(_AddNewUser())
+                    {
+                        _Mode = enMode.Update;
+                        return true;
+                    }
+                    break;
+
+            }
+
+            return false;
+        }
+       
 
 
     }

@@ -113,5 +113,11 @@ namespace DLVD_Project
 
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmAddUsersMDI frmAddUsersMDI = new frmAddUsersMDI();
+            frmAddUsersMDI.ShowDialog();
+        }
     }
 }

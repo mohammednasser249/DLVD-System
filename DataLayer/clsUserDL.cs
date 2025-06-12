@@ -45,6 +45,49 @@ namespace DataLayer
             return dataTable;
         }
 
+        public static int AddNewUserDL(int PersonID , string UserName , string Password , int IsActive)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string query = @"insert into Users(PersonID,UserName,Password,IsActive)
+                            values(@PersonID,@UserName,@Password,@IsActive)
+                             SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query,conn);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@UserName", UserName);
+            command.Parameters.AddWithValue("@Password", Password);
+            command.Parameters.AddWithValue("@IsActive", IsActive);
+
+            int UID = 0;
+
+            try
+            {
+                conn.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int personID))
+                {
+                    UID = personID;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return UID;
+
+
+        }
 
     }
 }
