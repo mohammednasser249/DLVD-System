@@ -55,12 +55,27 @@ namespace DLVD_Project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ucLogin._LoadPersonIDAndSaveUser(_PersonID);
+            if (ucLogin._LoadPersonIDAndSaveUser(_PersonID))
+            {
+                lbTitle.Text = "Update User";
+            }
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmUsers frmUsers = new frmUsers();
+            frmUsers._GetAllUsers();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            _PersonID = uc.PersonID; // get it from the showdeatils usercontrol 
+            panelMain.Controls.Clear();
+            ucLogin.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(ucLogin);
+            btnSave.Enabled = true;
         }
     }
 }

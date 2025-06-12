@@ -34,7 +34,12 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -65,14 +70,14 @@
             // 
             // panelMain
             // 
-            this.panelMain.Location = new System.Drawing.Point(-9, 29);
+            this.panelMain.Location = new System.Drawing.Point(0, 102);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1246, 564);
+            this.panelMain.Size = new System.Drawing.Size(1237, 504);
             this.panelMain.TabIndex = 3;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(918, 598);
+            this.btnClose.Location = new System.Drawing.Point(923, 9);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(140, 42);
             this.btnClose.TabIndex = 0;
@@ -82,7 +87,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(1076, 598);
+            this.btnSave.Location = new System.Drawing.Point(1085, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 42);
             this.btnSave.TabIndex = 4;
@@ -90,13 +95,44 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 603);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1237, 63);
+            this.panel1.TabIndex = 7;
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.ForeColor = System.Drawing.Color.Red;
+            this.lbTitle.Location = new System.Drawing.Point(451, 13);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(327, 55);
+            this.lbTitle.TabIndex = 8;
+            this.lbTitle.Text = "Add New User";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbTitle);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 28);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1237, 75);
+            this.panel2.TabIndex = 9;
+            // 
             // frmAddUsersMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 720);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnClose);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1237, 666);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
@@ -106,6 +142,9 @@
             this.Text = "frmAddUsersMDI";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +158,8 @@
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbTitle;
+        private System.Windows.Forms.Panel panel2;
     }
 }

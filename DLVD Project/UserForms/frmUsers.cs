@@ -20,14 +20,15 @@ namespace DLVD_Project
         }
 
 
-        private void _GetAllUsers()
+        public void _GetAllUsers()
         {
 
              dt =clsUserBL.GetAllUsers();
             dataGridView1.DataSource = dt;
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            dataGridView1.Columns[2].Width = 220;   
+            dataGridView1.Columns[2].Width = 220;
+            lbNumberOfRecrods.Text = dt.Rows.Count.ToString();
 
 
 
@@ -118,6 +119,11 @@ namespace DLVD_Project
         {
             frmAddUsersMDI frmAddUsersMDI = new frmAddUsersMDI();
             frmAddUsersMDI.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -20,10 +20,10 @@ namespace DLVD_Project.UserUC
         {
             InitializeComponent();
         }
-        public void _LoadPersonIDAndSaveUser(int ID)
+        public bool _LoadPersonIDAndSaveUser(int ID)
         {
-            PersonID = ID;
             clsUserBL User = new clsUserBL();
+            PersonID = ID;
 
             User.PersonID = PersonID;
             User.UserName = txtUserName.Text;
@@ -35,21 +35,31 @@ namespace DLVD_Project.UserUC
             else 
                 User.isActive = 0;
 
-            if(User.Save())
+            bool isadded = false;
+            int UID;
+            if((UID = User.Save())!=-1)
             {
                 MessageBox.Show("Data Saved Succussfully");
-            }
+                lbUserID.Text = UID.ToString();
+                isadded = true;
+                
+            }else
             {
                 MessageBox.Show("Data Failed to be saved ");
 
             }
-
+            return isadded;
 
         }
 
 
      
         private void UCLoginInfo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbUserID_Click(object sender, EventArgs e)
         {
 
         }

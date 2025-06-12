@@ -74,7 +74,7 @@ namespace BusinessLayer
         }
 
 
-        public bool Save()
+        public int Save()
         {
             switch(_Mode)
             {
@@ -82,13 +82,13 @@ namespace BusinessLayer
                     if(_AddNewUser())
                     {
                         _Mode = enMode.Update;
-                        return true;
+                        return this.UserID;
                     }
                     break;
 
             }
 
-            return false;
+            return -1;
         }
        
 

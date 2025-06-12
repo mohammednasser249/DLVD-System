@@ -39,6 +39,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbNumberOfRecrods = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -148,11 +149,22 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "# Records :";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(763, 611);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(152, 47);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 701);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lbNumberOfRecrods);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
@@ -187,5 +199,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbNumberOfRecrods;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnClose;
     }
 }

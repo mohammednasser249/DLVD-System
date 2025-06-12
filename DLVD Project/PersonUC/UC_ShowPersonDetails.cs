@@ -19,6 +19,8 @@ namespace DLVD_Project.PersonUC
         public UC_ShowPersonDetails()
         {
             InitializeComponent();
+            linkLabel1.Enabled = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,7 +82,7 @@ namespace DLVD_Project.PersonUC
                 {
                     lbGender.Text = "Female";
                 }
-
+                linkLabel1.Enabled = true;
 
 
             }

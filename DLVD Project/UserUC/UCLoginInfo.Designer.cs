@@ -36,7 +36,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.cbActive = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbUserID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -110,20 +110,21 @@
             this.cbActive.Text = "IsActive";
             this.cbActive.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lbUserID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(233, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 16);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "???";
+            this.lbUserID.AutoSize = true;
+            this.lbUserID.Location = new System.Drawing.Point(233, 116);
+            this.lbUserID.Name = "lbUserID";
+            this.lbUserID.Size = new System.Drawing.Size(28, 16);
+            this.lbUserID.TabIndex = 16;
+            this.lbUserID.Text = "???";
+            this.lbUserID.Click += new System.EventHandler(this.lbUserID_Click);
             // 
             // UCLoginInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbUserID);
             this.Controls.Add(this.cbActive);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtPassword);
@@ -150,6 +151,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.CheckBox cbActive;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbUserID;
     }
 }

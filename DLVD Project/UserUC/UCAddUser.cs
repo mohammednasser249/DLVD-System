@@ -35,10 +35,16 @@ namespace DLVD_Project.UserUC
             dt = clsPeopleBL.GetAllPeople();
 
             DataRow[] foundRows = dt.Select($"NationalNo = '{NationalNo}'");
-             PersonID = Convert.ToInt32(foundRows[0]["PersonID"]);
 
-            uC_ShowPersonDetails1.LoadPersonIDToUserControl(PersonID);
-
+            if (foundRows.Length > 0)
+            {
+                 PersonID = Convert.ToInt32(foundRows[0]["PersonID"]);
+                uC_ShowPersonDetails1.LoadPersonIDToUserControl(PersonID);
+            }
+            else
+            {
+                MessageBox.Show("This person was not found.");
+            }
 
         }
 
