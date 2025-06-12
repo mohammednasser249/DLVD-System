@@ -67,5 +67,11 @@ namespace DLVD_Project.UserUC
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmAddPeople frm = new frmAddPeople(0);
+            frm.ShowDialog();
+        }
     }
 }

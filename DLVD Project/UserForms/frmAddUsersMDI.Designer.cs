@@ -112,7 +112,7 @@
             this.lbTitle.ForeColor = System.Drawing.Color.Red;
             this.lbTitle.Location = new System.Drawing.Point(451, 13);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(327, 55);
+            this.lbTitle.Size = new System.Drawing.Size(317, 52);
             this.lbTitle.TabIndex = 8;
             this.lbTitle.Text = "Add New User";
             // 

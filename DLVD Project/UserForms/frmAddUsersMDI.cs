@@ -19,6 +19,8 @@ namespace DLVD_Project
 
         private int _PersonID;
 
+        private int _UserID;
+
         public frmAddUsersMDI()
         {
             InitializeComponent();
@@ -28,6 +30,24 @@ namespace DLVD_Project
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
             btnSave.Enabled = false;
+
+        }
+
+        public frmAddUsersMDI(int UserID)
+        {
+            InitializeComponent();
+
+            // Put as the main one as soon as the form opens 
+            _UserID = UserID;
+
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+            btnSave.Enabled = true;
+            ucLogin._LoadDataBackForUpdate(_UserID);
+            lbTitle.Text = "Update User";
+            
+
+
 
         }
 
@@ -55,9 +75,16 @@ namespace DLVD_Project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (ucLogin._LoadPersonIDAndSaveUser(_PersonID))
+            if (lbTitle.Text == "Add New User")
             {
-                lbTitle.Text = "Update User";
+                if (ucLogin._LoadPersonIDAndSaveUser(_PersonID))
+                {
+                    lbTitle.Text = "Update User";
+                }
+            }
+            else
+            {
+                ucLogin.LoadDataBack(_UserID);
             }
             
         }
@@ -65,8 +92,7 @@ namespace DLVD_Project
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmUsers frmUsers = new frmUsers();
-            frmUsers._GetAllUsers();
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)

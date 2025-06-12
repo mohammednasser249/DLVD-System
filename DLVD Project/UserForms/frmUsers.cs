@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using DLVD_Project.UserUC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,10 @@ namespace DLVD_Project
     public partial class frmUsers : Form
     {
         DataTable dt = new DataTable();
+
+        UCLoginInfo ucLogin = new UCLoginInfo();
+
+
         public frmUsers()
         {
             InitializeComponent();
@@ -119,6 +124,7 @@ namespace DLVD_Project
         {
             frmAddUsersMDI frmAddUsersMDI = new frmAddUsersMDI();
             frmAddUsersMDI.ShowDialog();
+            _GetAllUsers();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -139,6 +145,13 @@ namespace DLVD_Project
                     MessageBox.Show("User was not deleted succssfully");
 
             }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUsersMDI frmAddUsersMDI = new frmAddUsersMDI((int)dataGridView1.CurrentRow.Cells[0].Value);
+            frmAddUsersMDI.ShowDialog();
+            
         }
     }
 }

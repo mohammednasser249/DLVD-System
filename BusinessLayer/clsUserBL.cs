@@ -54,6 +54,24 @@ namespace BusinessLayer
             _Mode = enMode.Update;
         }
 
+        // Find UserById 
+
+        public static clsUserBL FindUserById(int id)
+        {
+            int PersonId = 0;
+            int IsActive = -1;
+            string username =string.Empty;
+            string password =string.Empty;
+
+            if(clsUserDL.FindUserByIDDL(id,ref PersonId,ref username,ref password,ref IsActive))
+            {
+                return new clsUserBL(id, PersonId, username,password, IsActive);
+            }else
+                return null;
+
+        }
+
+
         // Get All the users function 
             
         public static DataTable GetAllUsers()
@@ -67,7 +85,8 @@ namespace BusinessLayer
 
         private  bool _AddNewUser()
         {
-           if( clsUserDL.AddNewUserDL(this.PersonID, this.UserName, this.Password, this.isActive)!=0)
+            this.UserID = clsUserDL.AddNewUserDL(this.PersonID, this.UserName, this.Password, this.isActive);
+           if(this.UserID != 0)
                 return true;
            else 
                 return  false;
@@ -80,7 +99,18 @@ namespace BusinessLayer
           return  clsUserDL.DeleteUser(userid);
         }
 
-        public int Save()
+        // Update 
+
+        public  bool UpdateUserBL(int UserId)
+        {
+            if(clsUserDL.UpdateUserDL(UserId,this.UserName,this.Password,this.isActive))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool Save()
         {
             switch(_Mode)
             {
@@ -88,13 +118,15 @@ namespace BusinessLayer
                     if(_AddNewUser())
                     {
                         _Mode = enMode.Update;
-                        return this.UserID;
+                        return true;
                     }
                     break;
+                case enMode.Update:
+                    return UpdateUserBL(this.UserID);
 
             }
 
-            return -1;
+            return false;
         }
        
 

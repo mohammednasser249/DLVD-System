@@ -21,7 +21,7 @@ namespace DataLayer
                             from Users U , People P
                             where U.PersonID = P.PersonID";
 
-            SqlCommand cmd = new SqlCommand(qurey,conn);
+            SqlCommand cmd = new SqlCommand(qurey, conn);
 
             try
             {
@@ -45,7 +45,7 @@ namespace DataLayer
             return dataTable;
         }
 
-        public static int AddNewUserDL(int PersonID , string UserName , string Password , int IsActive)
+        public static int AddNewUserDL(int PersonID, string UserName, string Password, int IsActive)
         {
             SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
 
@@ -53,7 +53,7 @@ namespace DataLayer
                             values(@PersonID,@UserName,@Password,@IsActive)
                              SELECT SCOPE_IDENTITY();";
 
-            SqlCommand command = new SqlCommand(query,conn);
+            SqlCommand command = new SqlCommand(query, conn);
 
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@UserName", UserName);
@@ -96,7 +96,7 @@ namespace DataLayer
 
             string qurey = @"delete from Users Where UserID =@UserID";
 
-            SqlCommand cmd = new SqlCommand(qurey,conn);
+            SqlCommand cmd = new SqlCommand(qurey, conn);
             cmd.Parameters.AddWithValue("@UserID", UserID);
 
             bool isdeleted = false;
@@ -109,10 +109,11 @@ namespace DataLayer
                     isdeleted = true;
                 }
 
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
 
-            Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -121,7 +122,80 @@ namespace DataLayer
             return isdeleted;
         }
 
+        public static bool FindUserByIDDL(int userID, ref int personId, ref string username, ref string password, ref int isActive)
+        {
+            bool isFound = false;
 
-      
+            using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
+            {
+                string query = "SELECT PersonID, UserName, Password, IsActive FROM Users WHERE UserID = @UserID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@UserID", userID);
+
+                try
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            personId = Convert.ToInt32(reader["PersonID"]);
+                            username = reader["UserName"].ToString();
+                            password = reader["Password"].ToString();
+                            isActive = Convert.ToInt32(reader["IsActive"]);
+                            isFound = true;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error in FindUserByIDDL: " + ex.Message);
+                }
+            }
+
+            return isFound;
+        }
+
+
+        public static bool UpdateUserDL(int UserID, string Username, string Password, int IsActive)
+        {
+
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+            string qurey = @"update Users
+            set UserName= @Username , Password =@Password , IsActive = @IsActive
+            where UserID =@UserID";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+
+            cmd.Parameters.AddWithValue("@UserID", UserID);
+            cmd.Parameters.AddWithValue("@Username", Username);
+            cmd.Parameters.AddWithValue("@Password", Password);
+            cmd.Parameters.AddWithValue("@IsActive", IsActive);
+
+            bool isupdated = false;
+
+            try
+            {
+                conn.Open();
+                int rowsaffected = cmd.ExecuteNonQuery();
+                if (rowsaffected > 0)
+                {
+                    isupdated = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+                conn.Close();
+            }
+            return isupdated;
+        }
+
+        
     }
 }
