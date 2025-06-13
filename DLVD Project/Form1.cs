@@ -41,5 +41,15 @@ namespace DLVD_Project
             fmrChangePassword fmrChangePassword = new fmrChangePassword();
             fmrChangePassword.ShowDialog();
         }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            this.Visible = false;
+            frmLong frmLong = new frmLong();
+            frmLong.ShowDialog();
+            
+        }
     }
 }
