@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
@@ -230,6 +231,40 @@ namespace DataLayer
             return isupdated;
         }
 
-        
+        public static bool ChangePassword(int UserId, string newpassword)
+        {
+
+
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+            string query = @"update Users
+                        set Password =@newpassword
+                            where UserID=@UserID";
+
+            SqlCommand command = new SqlCommand(query, conn);
+
+            command.Parameters.AddWithValue("@UserId", UserId);
+            command.Parameters.AddWithValue("@newpassword", newpassword);
+
+            bool ischanged = false;
+
+            try
+            {
+                conn.Open();
+                int rowsaffected = command.ExecuteNonQuery();
+                if (rowsaffected > 0) {
+                    ischanged = true;
+                }
+
+            } catch (Exception ex)
+            {
+
+            Console.WriteLine(ex.Message); } 
+        finally {
+            conn.Close();
+            
+            }return ischanged;
+
+
+        }
     }
 }

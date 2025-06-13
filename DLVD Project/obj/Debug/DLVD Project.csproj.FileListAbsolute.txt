@@ -26,3 +26,4 @@ C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.frmAddUs
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.UserUC.UCLoginInfo.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.UserForms.frmCurrentUserInfoForm.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.UserUC.UCLoginCurrentUserInfo.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.UserForms.fmrChangePassword.resources

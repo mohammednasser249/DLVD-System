@@ -53,6 +53,12 @@ namespace BusinessLayer
             isActive = isactive;
             _Mode = enMode.Update;
         }
+        // Change password 
+
+        public static bool ChangePasswordBL(int UserID , string NewPassword)
+        {
+           return clsUserDL.ChangePassword(UserID , NewPassword);
+        }
 
         // Find UserById 
 

@@ -35,5 +35,11 @@ namespace DLVD_Project
             frmCurrentUserInfoForm frm = new frmCurrentUserInfoForm();
             frm.ShowDialog();
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fmrChangePassword fmrChangePassword = new fmrChangePassword();
+            fmrChangePassword.ShowDialog();
+        }
     }
 }
