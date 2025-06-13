@@ -50,7 +50,7 @@ namespace BusinessLayer
             PersonID = personid;
             UserName = username;
             Password = password;
-            isActive = isActive;
+            isActive = isactive;
             _Mode = enMode.Update;
         }
 
@@ -70,10 +70,27 @@ namespace BusinessLayer
                 return null;
 
         }
+        // Find Username 
+        public static clsUserBL FindUserByUserName(string UserName)
+        {
+            int PersonId = 0;
+            int IsActive = -1;
+            string password = string.Empty;
+            int UserID = 0;
+            if (clsUserDL.FindUserByUserNameDL(UserName, ref PersonId, ref UserID, ref password, ref IsActive))
+            {
+                return new clsUserBL(UserID, PersonId, UserName, password, IsActive);
+            }
+            else
+                return null;
+            
+
+        }
+
 
 
         // Get All the users function 
-            
+
         public static DataTable GetAllUsers()
         {
 
@@ -129,6 +146,7 @@ namespace BusinessLayer
             return false;
         }
        
+
 
 
     }

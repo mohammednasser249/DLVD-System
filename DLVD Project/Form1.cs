@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLVD_Project.UserForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,12 @@ namespace DLVD_Project
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUsers frm = new frmUsers();
+            frm.ShowDialog();
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCurrentUserInfoForm frm = new frmCurrentUserInfoForm();
             frm.ShowDialog();
         }
     }

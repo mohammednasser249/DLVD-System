@@ -156,6 +156,40 @@ namespace DataLayer
             return isFound;
         }
 
+        public static bool FindUserByUserNameDL(string UserName, ref int personId, ref int UserID, ref string password, ref int isActive)
+        {
+            bool isFound = false;
+
+            using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
+            {
+                string query = "SELECT UserID,PersonID, UserName, Password, IsActive FROM Users WHERE UserName = @UserName";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@UserName", UserName);
+
+                try
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            personId = Convert.ToInt32(reader["PersonID"]);
+                            UserID = Convert.ToInt32(reader["UserID"]);
+                            password = reader["Password"].ToString();
+                            isActive = Convert.ToInt32(reader["IsActive"]);
+                            isFound = true;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error in FindUserByIDDL: " + ex.Message);
+                }
+            }
+
+            return isFound;
+        }
+
 
         public static bool UpdateUserDL(int UserID, string Username, string Password, int IsActive)
         {

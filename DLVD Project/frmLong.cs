@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using DLVD_Project;
 
 namespace DLVD_Project
 {
     public partial class frmLong : Form
     {
+
+     
         public frmLong()
         {
             InitializeComponent();
@@ -28,10 +31,13 @@ namespace DLVD_Project
 
         }
 
+
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (clsLoginBl.CheckLogincredentials(txtUsername.Text, txtPassword.Text))
             {
+                Globals.CurrentUser = clsUserBL.FindUserByUserName(txtUsername.Text);
                 Form1 frm = new Form1();
                 frm.ShowDialog();
                 this.Close();

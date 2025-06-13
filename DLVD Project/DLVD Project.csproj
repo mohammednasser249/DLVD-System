@@ -68,6 +68,7 @@
     <Compile Include="frmAddPeople.Designer.cs">
       <DependentUpon>frmAddPeople.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="UserForms\frmAddUsersMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,12 @@
     </Compile>
     <Compile Include="frmShowDetails.Designer.cs">
       <DependentUpon>frmShowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\frmCurrentUserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\frmCurrentUserInfoForm.Designer.cs">
+      <DependentUpon>frmCurrentUserInfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserForms\frmUsers.cs">
       <SubType>Form</SubType>
@@ -118,6 +125,12 @@
     <Compile Include="UserUC\UCAddUser.Designer.cs">
       <DependentUpon>UCAddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserUC\UCLoginCurrentUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserUC\UCLoginCurrentUserInfo.Designer.cs">
+      <DependentUpon>UCLoginCurrentUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserUC\UCLoginInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +155,9 @@
     <EmbeddedResource Include="frmShowDetails.resx">
       <DependentUpon>frmShowDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\frmCurrentUserInfoForm.resx">
+      <DependentUpon>frmCurrentUserInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForms\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +178,9 @@
     </Compile>
     <EmbeddedResource Include="UserUC\UCAddUser.resx">
       <DependentUpon>UCAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUC\UCLoginCurrentUserInfo.resx">
+      <DependentUpon>UCLoginCurrentUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserUC\UCLoginInfo.resx">
       <DependentUpon>UCLoginInfo.cs</DependentUpon>
