@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,6 +38,8 @@
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.cbActive = new System.Windows.Forms.CheckBox();
             this.lbUserID = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -85,6 +88,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(225, 22);
             this.txtUserName.TabIndex = 12;
+            this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
             // txtPassword
             // 
@@ -92,6 +96,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(225, 22);
             this.txtPassword.TabIndex = 13;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // txtConfirmPassword
             // 
@@ -99,6 +104,7 @@
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(225, 22);
             this.txtConfirmPassword.TabIndex = 14;
+            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
             // 
             // cbActive
             // 
@@ -120,6 +126,10 @@
             this.lbUserID.Text = "???";
             this.lbUserID.Click += new System.EventHandler(this.lbUserID_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // UCLoginInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,6 +146,7 @@
             this.Name = "UCLoginInfo";
             this.Size = new System.Drawing.Size(1236, 614);
             this.Load += new System.EventHandler(this.UCLoginInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +163,6 @@
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.CheckBox cbActive;
         private System.Windows.Forms.Label lbUserID;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

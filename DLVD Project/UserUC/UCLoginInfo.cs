@@ -105,6 +105,18 @@ namespace DLVD_Project.UserUC
         }
 
 
+        public bool _CheckBeforeSubmit()
+        {
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                // All fields valid, proceed
+
+                return true;
+            }
+            else
+                return false;
+        }
+
 
         private void UCLoginInfo_Load(object sender, EventArgs e)
         {
@@ -114,6 +126,51 @@ namespace DLVD_Project.UserUC
         private void lbUserID_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUserName.Text))
+            {
+                e.Cancel = true;
+                txtUserName.Focus();
+                errorProvider1.SetError(txtUserName, "Please enter your UserName! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtUserName, null);
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                e.Cancel = true;
+                txtPassword.Focus();
+                errorProvider1.SetError(txtPassword, "Please enter your Password! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPassword, null);
+            }
+        }
+
+        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtConfirmPassword.Text))
+            {
+                e.Cancel = true;
+                txtConfirmPassword.Focus();
+                errorProvider1.SetError(txtConfirmPassword, "Please enter your Password! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtConfirmPassword, null);
+            }
         }
     }
 }

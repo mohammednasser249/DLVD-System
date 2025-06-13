@@ -75,18 +75,27 @@ namespace DLVD_Project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (lbTitle.Text == "Add New User")
+
+            if (ucLogin._CheckBeforeSubmit())
             {
-                if (ucLogin._LoadPersonIDAndSaveUser(_PersonID))
+                if (lbTitle.Text == "Add New User")
                 {
-                    lbTitle.Text = "Update User";
+                    if (ucLogin._LoadPersonIDAndSaveUser(_PersonID))
+                    {
+                        lbTitle.Text = "Update User";
+                    }
+                }
+                else
+                {
+                    ucLogin.LoadDataBack(_UserID);
                 }
             }
             else
             {
-                ucLogin.LoadDataBack(_UserID);
+                MessageBox.Show("Missing Inputs", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
-            
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

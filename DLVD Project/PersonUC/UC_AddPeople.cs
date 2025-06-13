@@ -383,6 +383,9 @@ namespace DLVD_Project.PersonUC
             }
         }
 
-      
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
