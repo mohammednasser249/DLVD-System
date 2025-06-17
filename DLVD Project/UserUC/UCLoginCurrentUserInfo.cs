@@ -37,5 +37,10 @@ namespace DLVD_Project.UserUC
         {
 
         }
+
+        private void lbUserID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

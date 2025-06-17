@@ -56,6 +56,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationUC\UC_IssueDrivingLicense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_IssueDrivingLicense.Designer.cs">
+      <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmApplicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmApplicationTypes.Designer.cs">
+      <DependentUpon>frmApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmEditApplicationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmEditApplicationType.Designer.cs">
+      <DependentUpon>frmEditApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmNewLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmNewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +167,18 @@
     <Compile Include="UserUC\UCLoginInfo.Designer.cs">
       <DependentUpon>UCLoginInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ApplicationUC\UC_IssueDrivingLicense.resx">
+      <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmApplicationTypes.resx">
+      <DependentUpon>frmApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmEditApplicationType.resx">
+      <DependentUpon>frmEditApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmNewLocalDrivingLicense.resx">
+      <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

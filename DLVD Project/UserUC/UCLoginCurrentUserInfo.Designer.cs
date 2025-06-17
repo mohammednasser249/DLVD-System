@@ -83,6 +83,7 @@
             this.lbUserID.Size = new System.Drawing.Size(28, 16);
             this.lbUserID.TabIndex = 18;
             this.lbUserID.Text = "???";
+            this.lbUserID.Click += new System.EventHandler(this.lbUserID_Click);
             // 
             // label2
             // 

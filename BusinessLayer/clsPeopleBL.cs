@@ -110,14 +110,13 @@ namespace BusinessLayer
            return clsPeopleDL.GetAllPeopleDL();
         }
 
-        private bool _AddNewPersonBL()
+        private int _AddNewPersonBL()
         {
-          if(  clsPeopleDL.AddPersonDL(this.NationalNo,this.FirstName,this.SecondName,this.ThirdName,this.LastName,this.Gender,this.Address,this.DOB,this.Phone,this.Email,this.NationalityCountryID,this.ImagePath))
-            {
-                return true;
-            }
-          return false;
+            this.ID = clsPeopleDL.AddPersonDL(this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.Gender, this.Address, this.DOB, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
+            return this.ID;
+
         }
+          
 
         // Update Function 
         private bool _UpdatePersonBL()
@@ -146,7 +145,7 @@ namespace BusinessLayer
             switch (_Mode)
             {
                 case enMode.AddNew:
-                    if (_AddNewPersonBL())
+                    if (_AddNewPersonBL()!=-1)
                     {
                         _Mode = enMode.Update;
                         return true;

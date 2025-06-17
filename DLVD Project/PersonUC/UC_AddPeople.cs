@@ -52,7 +52,7 @@ namespace DLVD_Project.PersonUC
                     if (pictureBox1.Image != null)
                     {
                         pictureBox1.Image.Dispose();
-                    }
+                    }   
 
                     pictureBox1.Image = new Bitmap(ofd.FileName);
                     ImagePath = ofd.FileName;
@@ -151,12 +151,14 @@ namespace DLVD_Project.PersonUC
         {
 
             _LoadCountriesToComboBox();
-           // _LoadData();
+            // User at least should be 18 years old 
+            dateTimePicker1.MaxDate = DateTime.Now.AddYears(-18);
+            // _LoadData();
         }
 
-    
 
-   
+
+
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
@@ -182,14 +184,13 @@ namespace DLVD_Project.PersonUC
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            if (!ValidateChildren(ValidationConstraints.Enabled))
             {
-                // All fields valid, proceed
-                MessageBox.Show("All inputs are valid!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Invalid inputs");
+                return;
 
             }
-            else
-                return;
+              
 
 
             if (Person ==null)
@@ -338,20 +339,7 @@ namespace DLVD_Project.PersonUC
 
         }
 
-        private void txtEmail_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtEmail.Text))
-            {
-                e.Cancel = true;
-                txtEmail.Focus();
-                errorProvider1.SetError(txtEmail, "Please enter your Email! ");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(txtEmail, null);
-            }
-        }
+      
 
         private void txtAddress_Validating(object sender, CancelEventArgs e)
         {
@@ -384,6 +372,37 @@ namespace DLVD_Project.PersonUC
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_Validating(object sender, CancelEventArgs e)
+        {
+         
+            
+        }
+
+        private void rdMale_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+            pictureBox1.Image = Image.FromFile(@"C:\Users\Asus\Desktop\Projects\DLVD\Images\LoginImages\user.png");
+
+        }
+
+        private void rdFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(@"C:\Users\Asus\Desktop\Projects\DLVD\Images\AddPeopleImages\admin_female.png");
+
+
+        }
+
+        private void lbPersonID_Click(object sender, EventArgs e)
         {
 
         }

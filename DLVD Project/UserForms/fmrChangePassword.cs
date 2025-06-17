@@ -60,5 +60,10 @@ namespace DLVD_Project.UserForms
         {
             this.Close();
         }
+
+        private void ucLoginCurrentUserInfo1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

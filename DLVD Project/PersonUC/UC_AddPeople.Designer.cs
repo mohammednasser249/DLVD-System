@@ -73,6 +73,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,6 +119,7 @@
             this.lbPersonID.Size = new System.Drawing.Size(37, 18);
             this.lbPersonID.TabIndex = 3;
             this.lbPersonID.Text = "N/A";
+            this.lbPersonID.Click += new System.EventHandler(this.lbPersonID_Click);
             // 
             // label4
             // 
@@ -260,6 +262,7 @@
             // rdMale
             // 
             this.rdMale.AutoSize = true;
+            this.rdMale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdMale.Location = new System.Drawing.Point(54, 11);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(58, 20);
@@ -267,10 +270,12 @@
             this.rdMale.TabStop = true;
             this.rdMale.Text = "Male";
             this.rdMale.UseVisualStyleBackColor = true;
+            this.rdMale.CheckedChanged += new System.EventHandler(this.rdMale_CheckedChanged);
             // 
             // rdFemale
             // 
             this.rdFemale.AutoSize = true;
+            this.rdFemale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdFemale.Location = new System.Drawing.Point(154, 11);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(74, 20);
@@ -278,6 +283,7 @@
             this.rdFemale.TabStop = true;
             this.rdFemale.Text = "Female";
             this.rdFemale.UseVisualStyleBackColor = true;
+            this.rdFemale.CheckedChanged += new System.EventHandler(this.rdFemale_CheckedChanged);
             // 
             // txtEmail
             // 
@@ -286,7 +292,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(185, 24);
             this.txtEmail.TabIndex = 19;
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtAddress
             // 
@@ -344,6 +349,8 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(241, 22);
             this.dateTimePicker1.TabIndex = 25;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePicker1.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimePicker1_Validating);
             // 
             // txtPhone
             // 
@@ -547,6 +554,13 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "admin_female.png");
+            this.imageList1.Images.SetKeyName(1, "user.png");
+            // 
             // UC_AddPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -623,5 +637,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

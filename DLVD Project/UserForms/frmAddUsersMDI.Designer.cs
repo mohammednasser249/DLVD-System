@@ -50,7 +50,7 @@
             this.loginInfoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1237, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1237, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,6 +74,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1237, 504);
             this.panelMain.TabIndex = 3;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // btnClose
             // 
@@ -120,7 +121,7 @@
             // 
             this.panel2.Controls.Add(this.lbTitle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 28);
+            this.panel2.Location = new System.Drawing.Point(0, 30);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1237, 75);
             this.panel2.TabIndex = 9;

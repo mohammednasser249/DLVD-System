@@ -1,4 +1,5 @@
-﻿using DLVD_Project.UserForms;
+﻿using DLVD_Project.Driving_License;
+using DLVD_Project.UserForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,28 @@ namespace DLVD_Project
             frmLong frmLong = new frmLong();
             frmLong.ShowDialog();
             
+        }
+
+        private void drivingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewLocalDrivingLicense frm = new frmNewLocalDrivingLicense();
+            frm.ShowDialog();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmApplicationTypes frm = new frmApplicationTypes();
+            frm.ShowDialog();
         }
     }
 }

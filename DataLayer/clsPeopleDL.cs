@@ -92,7 +92,7 @@ namespace DataLayer
             return dt;
         }
 
-        public static bool AddPersonDL( string NationalNo, string FirstName, string SecondName,
+        public static int AddPersonDL( string NationalNo, string FirstName, string SecondName,
           string ThirdName, string LastName, int Gender,string Address, DateTime DateOfBirth,
            string Phone, string Email,int NationalityCountryID,string ImagePath)
         {
@@ -107,7 +107,8 @@ namespace DataLayer
                VALUES (
                 @NationalNo, @FirstName, @SecondName, @ThirdName, @LastName, 
                 @DateOfBirth, @Gender, @Address, @Phone, @Email, 
-                @NationalityCountryID, @ImagePath)";
+                @NationalityCountryID, @ImagePath) 
+                Select scope_identity()";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -128,16 +129,17 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@ImagePath", DBNull.Value);
 
 
-            bool IsAdded = false;
+            int PID = -1;
             try
             {
                 conn.Open();
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
+             
+                object restult = cmd.ExecuteScalar();
+                if (restult != null && int.TryParse(restult.ToString(),out int ID) )
                 {
-                    IsAdded= true;
+                    PID = ID;
                 }
+
             }
             catch (Exception ex)
             {
@@ -148,7 +150,7 @@ namespace DataLayer
                 conn.Close();
             }
 
-            return IsAdded;
+            return PID;
 
 
         }

@@ -112,5 +112,10 @@ namespace DLVD_Project
             panelMain.Controls.Add(ucLogin);
             btnSave.Enabled = true;
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

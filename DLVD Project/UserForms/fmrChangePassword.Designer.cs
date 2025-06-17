@@ -46,6 +46,7 @@
             this.ucLoginCurrentUserInfo1.Name = "ucLoginCurrentUserInfo1";
             this.ucLoginCurrentUserInfo1.Size = new System.Drawing.Size(800, 99);
             this.ucLoginCurrentUserInfo1.TabIndex = 3;
+            this.ucLoginCurrentUserInfo1.Load += new System.EventHandler(this.ucLoginCurrentUserInfo1_Load);
             // 
             // uC_ShowPersonDetails1
             // 
