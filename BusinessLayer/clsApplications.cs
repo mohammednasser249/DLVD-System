@@ -69,6 +69,32 @@ namespace BusinessLayer
 
         }
 
+
+      
+        public static int IsExist(int personid , int applicationType)
+        {
+            int ID = clsApplicationsDL.IsExist(personid , applicationType);
+            if(ID != -1)
+                return ID;
+            return -1;
+        }
+
+    public bool Save()
+        {
+           switch(Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewApplication())
+                    {
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    break;
+            }
+            return false;
+
+        }
+
     }
 
 }

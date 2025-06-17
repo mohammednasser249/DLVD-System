@@ -113,10 +113,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(278, 287);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 16);
+            this.label9.Size = new System.Drawing.Size(30, 22);
             this.label9.TabIndex = 24;
             this.label9.Text = "15";
             // 
@@ -135,8 +135,9 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(270, 222);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 24);
+            this.comboBox1.Size = new System.Drawing.Size(256, 24);
             this.comboBox1.TabIndex = 26;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // UC_IssueDrivingLicense
             // 

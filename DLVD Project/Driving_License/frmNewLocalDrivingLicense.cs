@@ -1,4 +1,5 @@
-﻿using DLVD_Project.UserUC;
+﻿using DLVD_Project.ApplicationUC;
+using DLVD_Project.UserUC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace DLVD_Project.Driving_License
     public partial class frmNewLocalDrivingLicense : Form
     {
         UCAddUser uc = new UCAddUser();
+        UC_IssueDrivingLicense ucI = new UC_IssueDrivingLicense();
+        int PersonID;
         public frmNewLocalDrivingLicense()
         {
             InitializeComponent();
@@ -49,7 +52,15 @@ namespace DLVD_Project.Driving_License
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            ucI.LoadDataNewLicense(uc.PersonID);
+        }
 
+        private void applicationInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucI.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(ucI);
+            btnSave.Enabled = true;
         }
     }
 }
