@@ -47,6 +47,7 @@
     <Compile Include="clsDatabaseSettings.cs" />
     <Compile Include="clsLoginDL.cs" />
     <Compile Include="clsPeopleDL.cs" />
+    <Compile Include="clsTestTypeDL.cs" />
     <Compile Include="clsUserDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

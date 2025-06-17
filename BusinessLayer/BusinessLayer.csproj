@@ -46,6 +46,7 @@
     <Compile Include="clsCountriesBL.cs" />
     <Compile Include="clsLoginBl.cs" />
     <Compile Include="clsPeopleBL.cs" />
+    <Compile Include="clsTestTypesBL.cs" />
     <Compile Include="clsUserBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

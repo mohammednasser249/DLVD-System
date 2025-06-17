@@ -74,5 +74,11 @@ namespace DLVD_Project
             frmApplicationTypes frm = new frmApplicationTypes();
             frm.ShowDialog();
         }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTestTypes frm = new frmTestTypes();
+            frm.ShowDialog();
+        }
     }
 }
