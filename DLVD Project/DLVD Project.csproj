@@ -56,11 +56,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationUC\UC_ApplicatoinBasicInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_ApplicatoinBasicInfo.Designer.cs">
+      <DependentUpon>UC_ApplicatoinBasicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_DrivingLicenseAppInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_DrivingLicenseAppInfo.Designer.cs">
+      <DependentUpon>UC_DrivingLicenseAppInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_IssueDrivingLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ApplicationUC\UC_IssueDrivingLicense.Designer.cs">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_VisoinTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_VisoinTest.Designer.cs">
+      <DependentUpon>UC_VisoinTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmApplicationTypes.cs">
       <SubType>Form</SubType>
@@ -86,6 +104,12 @@
     <Compile Include="Driving_License\frmLocalDrivingLicenseApplications.Designer.cs">
       <DependentUpon>frmLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driving_License\frmMakeAVisionTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmMakeAVisionTests.Designer.cs">
+      <DependentUpon>frmMakeAVisionTests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driving_License\frmNewLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +121,12 @@
     </Compile>
     <Compile Include="Driving_License\frmTestTypes.Designer.cs">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmVisionTestAppointemtns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmVisionTestAppointemtns.Designer.cs">
+      <DependentUpon>frmVisionTestAppointemtns.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -185,8 +215,17 @@
     <Compile Include="UserUC\UCLoginInfo.Designer.cs">
       <DependentUpon>UCLoginInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ApplicationUC\UC_ApplicatoinBasicInfo.resx">
+      <DependentUpon>UC_ApplicatoinBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_DrivingLicenseAppInfo.resx">
+      <DependentUpon>UC_DrivingLicenseAppInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_IssueDrivingLicense.resx">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_VisoinTest.resx">
+      <DependentUpon>UC_VisoinTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmApplicationTypes.resx">
       <DependentUpon>frmApplicationTypes.cs</DependentUpon>
@@ -200,11 +239,17 @@
     <EmbeddedResource Include="Driving_License\frmLocalDrivingLicenseApplications.resx">
       <DependentUpon>frmLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmMakeAVisionTests.resx">
+      <DependentUpon>frmMakeAVisionTests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmNewLocalDrivingLicense.resx">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmTestTypes.resx">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmVisionTestAppointemtns.resx">
+      <DependentUpon>frmVisionTestAppointemtns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

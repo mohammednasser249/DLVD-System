@@ -37,8 +37,6 @@
             this.lbNumberOfRecrods = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.canToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
@@ -46,10 +44,14 @@
             this.deleteApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.scheduleTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -126,27 +128,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1400, 347);
             this.dataGridView1.TabIndex = 11;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(356, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(731, 49);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Local Driving License Applications";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(639, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -156,9 +137,10 @@
             this.editApplicationToolStripMenuItem,
             this.deleteApplicationToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.cancelApplicationToolStripMenuItem});
+            this.cancelApplicationToolStripMenuItem,
+            this.scheduleTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 140);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 164);
             // 
             // cancelToolStripMenuItem
             // 
@@ -197,6 +179,42 @@
             this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
             this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(356, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(731, 49);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Local Driving License Applications";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(639, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(164, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // scheduleTestToolStripMenuItem
+            // 
+            this.scheduleTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visionTestToolStripMenuItem});
+            this.scheduleTestToolStripMenuItem.Name = "scheduleTestToolStripMenuItem";
+            this.scheduleTestToolStripMenuItem.Size = new System.Drawing.Size(245, 24);
+            this.scheduleTestToolStripMenuItem.Text = "Schedule Tests";
+            // 
+            // visionTestToolStripMenuItem
+            // 
+            this.visionTestToolStripMenuItem.Name = "visionTestToolStripMenuItem";
+            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.visionTestToolStripMenuItem.Text = "Schedule Vision Test";
+            this.visionTestToolStripMenuItem.Click += new System.EventHandler(this.visionTestToolStripMenuItem_Click);
+            // 
             // frmLocalDrivingLicenseApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,8 +235,8 @@
             this.Load += new System.EventHandler(this.frmLocalDrivingLicenseApplications_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +260,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visionTestToolStripMenuItem;
     }
 }

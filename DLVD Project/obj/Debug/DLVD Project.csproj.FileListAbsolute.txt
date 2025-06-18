@@ -34,3 +34,8 @@ C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmTestTypes.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmEditTestTypes.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmLocalDrivingLicenseApplications.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_ApplicatoinBasicInfo.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_DrivingLicenseAppInfo.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmVisionTestAppointemtns.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_VisoinTest.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmMakeAVisionTests.resources

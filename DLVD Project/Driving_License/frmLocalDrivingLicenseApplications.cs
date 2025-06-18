@@ -170,6 +170,12 @@ namespace DLVD_Project.Driving_License
 
             }
         }
+
+        private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVisionTestAppointemtns frm = new frmVisionTestAppointemtns((int)dataGridView1.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 
 }

@@ -43,12 +43,14 @@
   <ItemGroup>
     <Compile Include="clsApplicationsDL.cs" />
     <Compile Include="clsApplicationTypesDL.cs" />
+    <Compile Include="clsclsLocalDrivingLicnseViewDl.cs" />
     <Compile Include="clsCountriesDL.cs" />
     <Compile Include="clsDatabaseSettings.cs" />
     <Compile Include="clsLicenseClassDl.cs" />
     <Compile Include="clsLocalDrivingLicenseApplicationsDL.cs" />
     <Compile Include="clsLoginDL.cs" />
     <Compile Include="clsPeopleDL.cs" />
+    <Compile Include="clsTestAppointmentsDL.cs" />
     <Compile Include="clsTestTypeDL.cs" />
     <Compile Include="clsUserDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
