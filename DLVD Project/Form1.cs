@@ -80,5 +80,11 @@ namespace DLVD_Project
             frmTestTypes frm = new frmTestTypes();
             frm.ShowDialog();
         }
+
+        private void manageApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLocalDrivingLicenseApplications frm = new frmLocalDrivingLicenseApplications();
+            frm.ShowDialog();
+        }
     }
 }

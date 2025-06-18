@@ -1,6 +1,7 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,13 +72,9 @@ namespace BusinessLayer
 
 
       
-        public static int IsExist(int personid , int applicationType)
-        {
-            int ID = clsApplicationsDL.IsExist(personid , applicationType);
-            if(ID != -1)
-                return ID;
-            return -1;
-        }
+
+
+       
 
     public bool Save()
         {

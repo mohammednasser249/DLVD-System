@@ -80,6 +80,12 @@
     <Compile Include="Driving_License\frmEditTestTypes.Designer.cs">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driving_License\frmLocalDrivingLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmLocalDrivingLicenseApplications.Designer.cs">
+      <DependentUpon>frmLocalDrivingLicenseApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driving_License\frmNewLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmEditTestTypes.resx">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmLocalDrivingLicenseApplications.resx">
+      <DependentUpon>frmLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmNewLocalDrivingLicense.resx">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>

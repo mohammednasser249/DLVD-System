@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -54,37 +55,7 @@ namespace DataLayer
 
 
 
-        public static int IsExist(int personid, int applicationtype)
-        {
-            int applicationId = -1;
 
-            string query = @"
-        SELECT ApplicationID
-        FROM Applications
-        WHERE ApplicantPersonID = @personid AND ApplicationTypeID = @applicationtype";
-
-            using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
-            using (SqlCommand command = new SqlCommand(query, conn))
-            {
-                command.Parameters.AddWithValue("@personid", personid);
-                command.Parameters.AddWithValue("@applicationtype", applicationtype);
-
-                try
-                {
-                    conn.Open();
-                    object result = command.ExecuteScalar();
-
-                    if (result != null && int.TryParse(result.ToString(), out int id))
-                        applicationId = id;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
-                }
-            }
-
-            return applicationId;
-        }
 
 
 

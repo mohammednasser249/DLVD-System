@@ -44,6 +44,7 @@ namespace DLVD_Project.ApplicationUC
         public  void LoadDataNewLicense(int ApplicantId)
         {
            
+            // Check if person exists 
             clsPeopleBL Person = clsPeopleBL.FindPerson(ApplicantId);
             if (Person == null)
             {
@@ -57,53 +58,44 @@ namespace DLVD_Project.ApplicationUC
 
             Application.ApplicantPersonID = ApplicantId;
             Application.ApplicationDate = DateTime.Now;
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    Application.ApplicationTypeID = 1;
-                    break;
-                case 1:
-                    Application.ApplicationTypeID = 2;
-                    break;
-                case 2:
-                    Application.ApplicationTypeID = 3;
-                    break;
-                case 3:
-                    Application.ApplicationTypeID = 4;
-                    break;
-                case 4:
-                    Application.ApplicationTypeID = 5;
-                    break;
-                case 5:
-                    Application.ApplicationTypeID = 6;
-                    break;
-            }
+            Application.ApplicationTypeID = 1; // always one since this is a new license 
             Application.ApplicationStatus = 1;
             Application.LastStatusDate = DateTime.Now;
             Application.PaidFees = 15;
             Application.CreatedByUserID = Globals.CurrentUser.UserID;
 
-            // Check if there is an applicatoin with the same info 
-            int checkid = clsApplications.IsExist(ApplicantId, Application.ApplicationTypeID);
-            if (checkid!=-1)
+
+            Application.Save(); // saving in the application table 
+      
+
+            // Create local application object and fill it 
+
+            clsLocalDrivingLicenseApplicationsBL localLicense = new clsLocalDrivingLicenseApplicationsBL();
+
+            localLicense.ApplicationId = int.Parse(Application.ApplicationID.ToString());
+            localLicense.LicenseClassID = comboBox1.SelectedIndex + 1;
+
+            // Check if this perosn have an application
+            // 
+            if(clsLocalDrivingLicenseApplicationsBL.IsExist(ApplicantId, localLicense.LicenseClassID)!=-1)
             {
-                MessageBox.Show($"Choose another class , the selected person is already have an active application for the selected class with id = {checkid}  ");
+                MessageBox.Show($"Choose another license class , the selected person already have an active application for the selected class with id ={Application.ApplicationID} ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
-            
+          
 
-            if (Application.Save())
+            if (localLicense.Save())
             {
                 MessageBox.Show("Saved succussfully");
-                lbApplicatoinId.Text = Application.ApplicationID.ToString();
+                lbApplicatoinId.Text = localLicense.LocalDrivingLicenseApplicationID.ToString();
+
             }
             else
             {
 
                 MessageBox.Show("Was not saved");
-
-
             }
+
 
 
 
