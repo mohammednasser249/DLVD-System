@@ -74,6 +74,12 @@
     <Compile Include="ApplicationUC\UC_IssueDrivingLicense.Designer.cs">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_TakeTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_TakeTest.Designer.cs">
+      <DependentUpon>UC_TakeTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_VisoinTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,12 @@
     </Compile>
     <Compile Include="Driving_License\frmNewLocalDrivingLicense.Designer.cs">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmTestTypes.cs">
       <SubType>Form</SubType>
@@ -224,6 +236,9 @@
     <EmbeddedResource Include="ApplicationUC\UC_IssueDrivingLicense.resx">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_TakeTest.resx">
+      <DependentUpon>UC_TakeTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_VisoinTest.resx">
       <DependentUpon>UC_VisoinTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmNewLocalDrivingLicense.resx">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmTestTypes.resx">
       <DependentUpon>frmTestTypes.cs</DependentUpon>

@@ -42,8 +42,15 @@ namespace DLVD_Project.Driving_License
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            // Check first 
-            clsTestAppointmentsBL App = clsTestAppointmentsBL.FindById(LicnseId);
+            clsTestAppointmentsBL App = null;
+            if (dataGridView1.CurrentRow != null &&
+     dataGridView1.CurrentRow.Cells[0].Value != null &&
+     dataGridView1.CurrentRow.Cells[0].Value != DBNull.Value)
+            {
+                int x = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    App = clsTestAppointmentsBL.FindById(x);
+            }
+
             bool check;
             if (App == null)
             {
@@ -52,13 +59,99 @@ namespace DLVD_Project.Driving_License
             else
                 check = App.IsLocked;
 
-            if (check)
+            // Check for passing the test or not 
+
+            clsTestBL Test = clsTestBL.FindTestByID(App.TestAppointmentID);
+
+            bool check2 =true;
+            if (Test.TestResult == 1)
+                check2 = false;
+
+       
+
+            if (check && check2)
             {
-                frmMakeAVisionTests frm = new frmMakeAVisionTests(LicnseId);
+                
+                frmMakeAVisionTests frm = new frmMakeAVisionTests(-1,LicnseId);
                 frm.ShowDialog();
+                _GetAllVisionTest(LicnseId);
+    
+            }
+            else if(check==false && check2==true)
+                MessageBox.Show("Person Already have an active appointment for this test , you can not add new appointment  ");
+            else
+                MessageBox.Show("Person Already have passed this test  ");
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsTestAppointmentsBL App = null;
+            if (dataGridView1.CurrentRow != null &&
+     dataGridView1.CurrentRow.Cells[0].Value != null &&
+     dataGridView1.CurrentRow.Cells[0].Value != DBNull.Value)
+            {
+                int x = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                App = clsTestAppointmentsBL.FindById(x);
+            }
+
+            bool check;
+            if (App == null)
+            {
+                check = true;
             }
             else
-                MessageBox.Show("Person Already have an active appointment for this test , you can not add new appointment  ");
+                check = App.IsLocked;
+
+            if (!check)
+            {
+                frmMakeAVisionTests frm = new frmMakeAVisionTests((int)dataGridView1.CurrentRow.Cells[0].Value, LicnseId);
+                frm.ShowDialog();
+                _GetAllVisionTest(LicnseId);
+            }
+            else
+                MessageBox.Show("implementing soon");
+
+            // form of the person already has taken this test and it is locked 
+
+        }
+
+        private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsTestAppointmentsBL App = null;
+            if (dataGridView1.CurrentRow != null &&
+     dataGridView1.CurrentRow.Cells[0].Value != null &&
+     dataGridView1.CurrentRow.Cells[0].Value != DBNull.Value)
+            {
+                int x = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                App = clsTestAppointmentsBL.FindById(x);
+            }
+
+            bool check;
+            if (App == null)
+            {
+                check = true;
+            }
+            else
+                check = App.IsLocked;
+
+            // Check for passing the test or not 
+            bool check2 = true;
+            clsTestBL Test = clsTestBL.FindTestByID(App.TestAppointmentID);
+            if (Test != null) {
+                if (Test.TestResult == 1 || Test.TestResult == 0)
+                    check2 = false;
+            }
+
+            if (check2)
+            {
+                frmTakeTest frm = new frmTakeTest((int)dataGridView1.CurrentRow.Cells[0].Value);
+                frm.ShowDialog();
+                _GetAllVisionTest(LicnseId);
+            }
+            else
+                MessageBox.Show("Person already has taken this test ");
+                    
         }
     }
 }

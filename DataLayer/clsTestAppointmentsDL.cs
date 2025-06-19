@@ -18,7 +18,7 @@ namespace DataLayer
 
             string qurey = @"select COUNT(*)
 from TestAppointments
-where LocalDrivingLicenseApplicationID=@LID and TestTypeID=1 ";
+where LocalDrivingLicenseApplicationID=@LID and TestTypeID=1 and IsLocked=1 ";
 
             SqlCommand cmd = new SqlCommand(qurey, conn);
 
@@ -142,7 +142,7 @@ where LocalDrivingLicenseApplicationID=@LID and TestTypeID=1 ";
 
             string qurey = @"select *
 from TestAppointments
-where LocalDrivingLicenseApplicationID=@testAppointmentID"; 
+where TestAppointmentID =@testAppointmentID"; 
 
             SqlCommand cmd = new SqlCommand(qurey, conn);
 
@@ -182,7 +182,44 @@ where LocalDrivingLicenseApplicationID=@testAppointmentID";
         }
 
 
+        public static bool UpdateTestAppointementsDL(  int testAppointmentID,  int testTypeID,  int localDrivingLicenseApplicationID,  DateTime appointmentDate,  decimal paidFees,  int createdByUserID,  bool isLocked)
+        {
 
+            bool isUpdated = false;
+
+            using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
+            {
+                string query = @"
+            UPDATE TestAppointments
+            SET 
+                TestTypeID = @testTypeID, 
+                LocalDrivingLicenseApplicationID = @localDrivingLicenseApplicationID, 
+                AppointmentDate = @appointmentDate, 
+                PaidFees = @paidFees, 
+                CreatedByUserID = @createdByUserID, 
+                IsLocked = @isLocked
+            WHERE 
+                TestAppointmentID = @testAppointmentID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@testTypeID", testTypeID);
+                    cmd.Parameters.AddWithValue("@localDrivingLicenseApplicationID", localDrivingLicenseApplicationID);
+                    cmd.Parameters.AddWithValue("@appointmentDate", appointmentDate);
+                    cmd.Parameters.AddWithValue("@paidFees", paidFees);
+                    cmd.Parameters.AddWithValue("@createdByUserID", createdByUserID);
+                    cmd.Parameters.AddWithValue("@isLocked", isLocked);
+                    cmd.Parameters.AddWithValue("@testAppointmentID", testAppointmentID);
+
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    isUpdated = (rowsAffected > 0);
+                }
+            }
+
+            return isUpdated;
+
+        }
 
 
     }

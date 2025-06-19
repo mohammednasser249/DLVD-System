@@ -50,21 +50,21 @@
             this.applicationInfoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1291, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1291, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // personalInfoToolStripMenuItem
             // 
             this.personalInfoToolStripMenuItem.Name = "personalInfoToolStripMenuItem";
-            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
+            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.personalInfoToolStripMenuItem.Text = "Personal Info";
             this.personalInfoToolStripMenuItem.Click += new System.EventHandler(this.personalInfoToolStripMenuItem_Click_1);
             // 
             // applicationInfoToolStripMenuItem
             // 
             this.applicationInfoToolStripMenuItem.Name = "applicationInfoToolStripMenuItem";
-            this.applicationInfoToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
+            this.applicationInfoToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.applicationInfoToolStripMenuItem.Text = "Application Info";
             this.applicationInfoToolStripMenuItem.Click += new System.EventHandler(this.applicationInfoToolStripMenuItem_Click);
             // 
@@ -84,7 +84,7 @@
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 30);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 28);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1291, 57);
             this.guna2CustomGradientPanel1.TabIndex = 4;
@@ -124,9 +124,9 @@
             // 
             this.panelMain.BackColor = System.Drawing.Color.White;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 87);
+            this.panelMain.Location = new System.Drawing.Point(0, 85);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1291, 482);
+            this.panelMain.Size = new System.Drawing.Size(1291, 484);
             this.panelMain.TabIndex = 6;
             // 
             // frmNewLocalDrivingLicense

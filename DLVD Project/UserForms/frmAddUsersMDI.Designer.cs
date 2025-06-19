@@ -50,21 +50,21 @@
             this.loginInfoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1237, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1237, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // personalInfoToolStripMenuItem
             // 
             this.personalInfoToolStripMenuItem.Name = "personalInfoToolStripMenuItem";
-            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
+            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.personalInfoToolStripMenuItem.Text = "Personal Info";
             this.personalInfoToolStripMenuItem.Click += new System.EventHandler(this.personalInfoToolStripMenuItem_Click);
             // 
             // loginInfoToolStripMenuItem
             // 
             this.loginInfoToolStripMenuItem.Name = "loginInfoToolStripMenuItem";
-            this.loginInfoToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
+            this.loginInfoToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.loginInfoToolStripMenuItem.Text = "Login Info";
             this.loginInfoToolStripMenuItem.Click += new System.EventHandler(this.loginInfoToolStripMenuItem_Click);
             // 
@@ -121,7 +121,7 @@
             // 
             this.panel2.Controls.Add(this.lbTitle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 30);
+            this.panel2.Location = new System.Drawing.Point(0, 28);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1237, 75);
             this.panel2.TabIndex = 9;

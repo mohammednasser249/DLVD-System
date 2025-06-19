@@ -10,20 +10,18 @@ using System.Windows.Forms;
 
 namespace DLVD_Project.Driving_License
 {
-    public partial class frmMakeAVisionTests : Form
+    public partial class frmTakeTest : Form
     {
-        int ID;
-        int TID;
-        public frmMakeAVisionTests(int TestID,int LicenceID)
+        int TestId;
+        public frmTakeTest(int testid)
         {
             InitializeComponent();
-            ID = LicenceID;
-            TID = TestID;
+            TestId = testid;
         }
 
-        private void frmMakeAVisionTests_Load(object sender, EventArgs e)
+        private void frmTakeTest_Load(object sender, EventArgs e)
         {
-            uC_VisoinTest1._LoadData(TID,ID);
+            uC_TakeTest1._LoadData(TestId);
         }
     }
 }

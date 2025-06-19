@@ -96,6 +96,11 @@ namespace BusinessLayer
             return false;
         }
 
+        private bool _UpdateTestAppointment()
+        {
+            return clsTestAppointmentsDL.UpdateTestAppointementsDL(this.TestAppointmentID, this.TestTypeID,this.LocalDrivingLicenseApplicationID, this.AppointmentDate, this.PaidFees, this.CreatedByUserID, this.IsLocked);
+        }
+
         public bool Save()
         {
             switch(Mode)
@@ -108,7 +113,8 @@ namespace BusinessLayer
                     }
                     break;
 
-
+                case enMode.Update:
+                    return _UpdateTestAppointment();
             }
             return false ;
         }

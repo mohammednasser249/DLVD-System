@@ -39,3 +39,5 @@ C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Applicat
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmVisionTestAppointemtns.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_VisoinTest.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmMakeAVisionTests.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_TakeTest.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmTakeTest.resources

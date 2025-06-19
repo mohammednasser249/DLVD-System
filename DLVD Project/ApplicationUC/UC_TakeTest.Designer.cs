@@ -1,6 +1,6 @@
 ﻿namespace DLVD_Project.ApplicationUC
 {
-    partial class UC_VisoinTest
+    partial class UC_TakeTest
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_VisoinTest));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_TakeTest));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbFees = new System.Windows.Forms.Label();
             this.lbTrial = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
@@ -44,22 +43,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gbRetake = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.rdPass = new System.Windows.Forms.RadioButton();
+            this.rdFail = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.lbDate = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbRetake.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.lbDate);
             this.groupBox1.Controls.Add(this.lbFees);
             this.groupBox1.Controls.Add(this.lbTrial);
             this.groupBox1.Controls.Add(this.lbName);
@@ -73,19 +70,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(24, 15);
+            this.groupBox1.Location = new System.Drawing.Point(23, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(469, 478);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vision Test";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 384);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(154, 22);
-            this.dateTimePicker1.TabIndex = 37;
             // 
             // lbFees
             // 
@@ -166,7 +156,6 @@
             this.label4.Size = new System.Drawing.Size(70, 19);
             this.label4.TabIndex = 28;
             this.label4.Text = "Name :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
@@ -220,135 +209,121 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // gbRetake
+            // label8
             // 
-            this.gbRetake.Controls.Add(this.label13);
-            this.gbRetake.Controls.Add(this.label12);
-            this.gbRetake.Controls.Add(this.label11);
-            this.gbRetake.Controls.Add(this.label10);
-            this.gbRetake.Controls.Add(this.label9);
-            this.gbRetake.Controls.Add(this.label8);
-            this.gbRetake.Location = new System.Drawing.Point(31, 515);
-            this.gbRetake.Name = "gbRetake";
-            this.gbRetake.Size = new System.Drawing.Size(461, 97);
-            this.gbRetake.TabIndex = 1;
-            this.gbRetake.TabStop = false;
-            this.gbRetake.Text = "Retake Test Info";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(26, 495);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 19);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Result :";
             // 
-            // label13
+            // rdPass
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(355, 28);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(24, 18);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "10";
+            this.rdPass.AutoSize = true;
+            this.rdPass.Location = new System.Drawing.Point(101, 495);
+            this.rdPass.Name = "rdPass";
+            this.rdPass.Size = new System.Drawing.Size(59, 20);
+            this.rdPass.TabIndex = 39;
+            this.rdPass.TabStop = true;
+            this.rdPass.Text = "Pass";
+            this.rdPass.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // rdFail
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(145, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(16, 18);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(157, 67);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 18);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "N/A";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(255, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 19);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Total Fees:";
+            this.rdFail.AutoSize = true;
+            this.rdFail.Location = new System.Drawing.Point(181, 495);
+            this.rdFail.Name = "rdFail";
+            this.rdFail.Size = new System.Drawing.Size(50, 20);
+            this.rdFail.TabIndex = 40;
+            this.rdFail.TabStop = true;
+            this.rdFail.Text = "Fail";
+            this.rdFail.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 66);
+            this.label9.Location = new System.Drawing.Point(26, 545);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 19);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "R.Test.App ID :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 19);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "R.App Fees :";
+            this.label9.Size = new System.Drawing.Size(66, 19);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Notes :";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(352, 631);
+            this.button1.Location = new System.Drawing.Point(380, 654);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 36);
-            this.button1.TabIndex = 2;
+            this.button1.Size = new System.Drawing.Size(121, 47);
+            this.button1.TabIndex = 42;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UC_VisoinTest
+            // txtNotes
+            // 
+            this.txtNotes.Location = new System.Drawing.Point(101, 545);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(350, 90);
+            this.txtNotes.TabIndex = 43;
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Location = new System.Drawing.Point(180, 385);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(42, 18);
+            this.lbDate.TabIndex = 37;
+            this.lbDate.Text = "[???]";
+            // 
+            // UC_TakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.gbRetake);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.rdFail);
+            this.Controls.Add(this.rdPass);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
-            this.Name = "UC_VisoinTest";
-            this.Size = new System.Drawing.Size(516, 682);
-            this.Load += new System.EventHandler(this.UC_VisoinTest_Load);
+            this.Name = "UC_TakeTest";
+            this.Size = new System.Drawing.Size(524, 716);
+            this.Load += new System.EventHandler(this.UC_TakeTest_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbRetake.ResumeLayout(false);
-            this.gbRetake.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbApplicatoinId;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbFees;
         private System.Windows.Forms.Label lbTrial;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbClass;
-        private System.Windows.Forms.GroupBox gbRetake;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbApplicatoinId;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton rdPass;
+        private System.Windows.Forms.RadioButton rdFail;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNotes;
     }
 }

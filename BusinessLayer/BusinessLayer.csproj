@@ -50,6 +50,7 @@
     <Compile Include="clsLoginBl.cs" />
     <Compile Include="clsPeopleBL.cs" />
     <Compile Include="clsTestAppointmentsBL.cs" />
+    <Compile Include="clsTestBL.cs" />
     <Compile Include="clsTestTypesBL.cs" />
     <Compile Include="clsUserBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

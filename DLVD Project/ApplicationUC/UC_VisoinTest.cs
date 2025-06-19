@@ -14,8 +14,16 @@ namespace DLVD_Project.ApplicationUC
     public partial class UC_VisoinTest : UserControl
     {
         clsLocalDrivingLicnseViewBl View = new clsLocalDrivingLicnseViewBl();
-        clsTestAppointmentsBL Test = new clsTestAppointmentsBL();
+        clsTestAppointmentsBL Test;
         int LID;
+
+       public enum enmode
+        {
+            Addnew,
+            Update
+        }
+
+       public enmode Mode;
 
         public UC_VisoinTest()
         {
@@ -27,33 +35,59 @@ namespace DLVD_Project.ApplicationUC
 
         }
 
-        public void _LoadData(int licenceID)
+
+        public void _LoadData(int TestAppoitnemntID, int licenceID )
         {
+            // if new application 
 
-             View = clsLocalDrivingLicnseViewBl.FindByLicenseID(licenceID);
+            View = clsLocalDrivingLicnseViewBl.FindByLicenseID(licenceID);
 
-            if (View == null)
+            lbApplicatoinId.Text = View.LocalDrivingLicenseApplicationID.ToString();
+            lbName.Text = View.FullName.ToString();
+            lbClass.Text = View.ClassName.ToString();
+            lbTrial.Text = clsTestAppointmentsBL.isExist(licenceID).ToString();
+            if (lbTrial.Text == "0")
+                gbRetake.Enabled = false;
+            else
+                gbRetake.Enabled = true;
+
+            LID = View.LocalDrivingLicenseApplicationID;
+
+            if (TestAppoitnemntID==-1)
+            {
+                Test= new clsTestAppointmentsBL();
+
+                dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                // Find the application info an fill them 
+
+                /*
+                dateTimePicker1.Text = View.ApplicationDate.ToString();
+                dateTimePicker1.Format = DateTimePickerFormat.Custom;
+                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                */
+
+
+                return;
+
+            }
+
+
+            Test = clsTestAppointmentsBL.FindById(TestAppoitnemntID);
+
+            if (Test == null)
             {
                 MessageBox.Show("Was not found");
                 return;
             }
 
-           
-
-            lbApplicatoinId.Text = View.LocalDrivingLicenseApplicationID.ToString();    
-            lbName.Text = View.FullName.ToString();
-            lbClass.Text = View.ClassName.ToString();
-            dateTimePicker1.Text = View.ApplicationDate.ToString();
+            dateTimePicker1.Text = Test.AppointmentDate.ToString();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            lbTrial.Text = clsTestAppointmentsBL.isExist(licenceID).ToString();
-            if(lbTrial.Text=="0")
+            if (lbTrial.Text == "0")
                 gbRetake.Enabled = false;
             else
-            gbRetake.Enabled = true;
-
-            LID=View.LocalDrivingLicenseApplicationID;
-
+                gbRetake.Enabled = true;
 
 
 
@@ -61,11 +95,6 @@ namespace DLVD_Project.ApplicationUC
         }
 
 
-        public void _LoadTestData (int licenceID)
-        {
-            
-
-        }
         private void UC_VisoinTest_Load(object sender, EventArgs e)
         {
 
