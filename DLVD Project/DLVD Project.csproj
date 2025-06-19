@@ -74,6 +74,18 @@
     <Compile Include="ApplicationUC\UC_IssueDrivingLicense.Designer.cs">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_StreetTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_StreetTest.Designer.cs">
+      <DependentUpon>UC_StreetTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_TakeStreetTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_TakeStreetTest.Designer.cs">
+      <DependentUpon>UC_TakeStreetTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_TakeTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,11 +146,29 @@
     <Compile Include="Driving_License\frmMakeAWrittenTest.Designer.cs">
       <DependentUpon>frmMakeAWrittenTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driving_License\frmMakeStreetTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmMakeStreetTest.Designer.cs">
+      <DependentUpon>frmMakeStreetTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driving_License\frmNewLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Driving_License\frmNewLocalDrivingLicense.Designer.cs">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmStreetTestAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmStreetTestAppointments.Designer.cs">
+      <DependentUpon>frmStreetTestAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmTakeStreetTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmTakeStreetTest.Designer.cs">
+      <DependentUpon>frmTakeStreetTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmTakeTest.cs">
       <SubType>Form</SubType>
@@ -266,6 +296,12 @@
     <EmbeddedResource Include="ApplicationUC\UC_IssueDrivingLicense.resx">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_StreetTest.resx">
+      <DependentUpon>UC_StreetTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_TakeStreetTest.resx">
+      <DependentUpon>UC_TakeStreetTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_TakeTest.resx">
       <DependentUpon>UC_TakeTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,8 +332,17 @@
     <EmbeddedResource Include="Driving_License\frmMakeAWrittenTest.resx">
       <DependentUpon>frmMakeAWrittenTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmMakeStreetTest.resx">
+      <DependentUpon>frmMakeStreetTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmNewLocalDrivingLicense.resx">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmStreetTestAppointments.resx">
+      <DependentUpon>frmStreetTestAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmTakeStreetTest.resx">
+      <DependentUpon>frmTakeStreetTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmTakeTest.resx">
       <DependentUpon>frmTakeTest.cs</DependentUpon>

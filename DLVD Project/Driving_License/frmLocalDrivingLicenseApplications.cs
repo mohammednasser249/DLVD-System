@@ -185,11 +185,23 @@ namespace DLVD_Project.Driving_License
         {
             clsLocalDrivingLicnseViewBl View = clsLocalDrivingLicnseViewBl.FindByLicenseID((int)dataGridView1.CurrentRow.Cells[0].Value);
 
-            if(View.PassedTestCount==1)
+            if(View.PassedTestCount==0)
+            {
+                scheduleTestToolStripMenuItem.Enabled = true;
+                visionTestToolStripMenuItem.Enabled = true;
+                scheduleStreetTestToolStripMenuItem.Enabled = false;
+                scheduleWrittenTestToolStripMenuItem.Enabled = false;
+
+            }
+
+
+            if (View.PassedTestCount==1)
             {
                 visionTestToolStripMenuItem.Enabled = false;
                 scheduleStreetTestToolStripMenuItem.Enabled = false;
                 scheduleWrittenTestToolStripMenuItem.Enabled = true;
+                scheduleTestToolStripMenuItem.Enabled = true;
+
 
             }
             if (View.PassedTestCount==2)
@@ -197,6 +209,8 @@ namespace DLVD_Project.Driving_License
                 visionTestToolStripMenuItem.Enabled = false;
                 scheduleWrittenTestToolStripMenuItem.Enabled = false;
                 scheduleStreetTestToolStripMenuItem.Enabled = true;
+                scheduleTestToolStripMenuItem.Enabled = true;
+
 
             }
 
@@ -206,6 +220,7 @@ namespace DLVD_Project.Driving_License
                 scheduleStreetTestToolStripMenuItem.Enabled = false;
                 visionTestToolStripMenuItem.Enabled = false;
                 scheduleWrittenTestToolStripMenuItem.Enabled = false;
+                scheduleTestToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -213,6 +228,13 @@ namespace DLVD_Project.Driving_License
         {
             frmWrittenTestAppointments frm = new frmWrittenTestAppointments((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+        }
+
+        private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStreetTestAppointments frm = new frmStreetTestAppointments((int)dataGridView1.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+
         }
     }
 
