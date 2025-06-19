@@ -80,11 +80,23 @@
     <Compile Include="ApplicationUC\UC_TakeTest.Designer.cs">
       <DependentUpon>UC_TakeTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_TakeWrittenTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_TakeWrittenTest.Designer.cs">
+      <DependentUpon>UC_TakeWrittenTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_VisoinTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ApplicationUC\UC_VisoinTest.Designer.cs">
       <DependentUpon>UC_VisoinTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_WrittenTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_WrittenTest.Designer.cs">
+      <DependentUpon>UC_WrittenTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmApplicationTypes.cs">
       <SubType>Form</SubType>
@@ -116,6 +128,12 @@
     <Compile Include="Driving_License\frmMakeAVisionTests.Designer.cs">
       <DependentUpon>frmMakeAVisionTests.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driving_License\frmMakeAWrittenTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmMakeAWrittenTest.Designer.cs">
+      <DependentUpon>frmMakeAWrittenTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driving_License\frmNewLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +146,12 @@
     <Compile Include="Driving_License\frmTakeTest.Designer.cs">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driving_License\frmTakeWrittenTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmTakeWrittenTest.Designer.cs">
+      <DependentUpon>frmTakeWrittenTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driving_License\frmTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +163,12 @@
     </Compile>
     <Compile Include="Driving_License\frmVisionTestAppointemtns.Designer.cs">
       <DependentUpon>frmVisionTestAppointemtns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmWrittenTestAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmWrittenTestAppointments.Designer.cs">
+      <DependentUpon>frmWrittenTestAppointments.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -239,8 +269,14 @@
     <EmbeddedResource Include="ApplicationUC\UC_TakeTest.resx">
       <DependentUpon>UC_TakeTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_TakeWrittenTest.resx">
+      <DependentUpon>UC_TakeWrittenTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_VisoinTest.resx">
       <DependentUpon>UC_VisoinTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_WrittenTest.resx">
+      <DependentUpon>UC_WrittenTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmApplicationTypes.resx">
       <DependentUpon>frmApplicationTypes.cs</DependentUpon>
@@ -257,17 +293,26 @@
     <EmbeddedResource Include="Driving_License\frmMakeAVisionTests.resx">
       <DependentUpon>frmMakeAVisionTests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmMakeAWrittenTest.resx">
+      <DependentUpon>frmMakeAWrittenTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmNewLocalDrivingLicense.resx">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmTakeTest.resx">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmTakeWrittenTest.resx">
+      <DependentUpon>frmTakeWrittenTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmTestTypes.resx">
       <DependentUpon>frmTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmVisionTestAppointemtns.resx">
       <DependentUpon>frmVisionTestAppointemtns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmWrittenTestAppointments.resx">
+      <DependentUpon>frmWrittenTestAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace DLVD_Project.Driving_License
 {
-    partial class frmTakeTest
+    partial class frmMakeAWrittenTest
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uC_TakeTest1 = new DLVD_Project.ApplicationUC.UC_TakeTest();
+            this.uC_WrittenTest1 = new DLVD_Project.ApplicationUC.UC_WrittenTest();
             this.SuspendLayout();
             // 
-            // uC_TakeTest1
+            // uC_WrittenTest1
             // 
-            this.uC_TakeTest1.BackColor = System.Drawing.Color.White;
-            this.uC_TakeTest1.Location = new System.Drawing.Point(-1, -2);
-            this.uC_TakeTest1.Name = "uC_TakeTest1";
-            this.uC_TakeTest1.Size = new System.Drawing.Size(524, 716);
-            this.uC_TakeTest1.TabIndex = 0;
+            this.uC_WrittenTest1.BackColor = System.Drawing.Color.White;
+            this.uC_WrittenTest1.Location = new System.Drawing.Point(13, -1);
+            this.uC_WrittenTest1.Name = "uC_WrittenTest1";
+            this.uC_WrittenTest1.Size = new System.Drawing.Size(516, 682);
+            this.uC_WrittenTest1.TabIndex = 0;
             // 
-            // frmTakeTest
+            // frmMakeAWrittenTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 714);
-            this.Controls.Add(this.uC_TakeTest1);
-            this.Name = "frmTakeTest";
+            this.ClientSize = new System.Drawing.Size(541, 693);
+            this.Controls.Add(this.uC_WrittenTest1);
+            this.Name = "frmMakeAWrittenTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTakeTest";
-            this.Load += new System.EventHandler(this.frmTakeTest_Load);
+            this.Text = "frmMakeAWrittenTest";
+            this.Load += new System.EventHandler(this.frmMakeAWrittenTest_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ApplicationUC.UC_TakeTest uC_TakeTest1;
+        private ApplicationUC.UC_WrittenTest uC_WrittenTest1;
     }
 }

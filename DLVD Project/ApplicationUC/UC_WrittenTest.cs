@@ -5,38 +5,28 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DLVD_Project.ApplicationUC
 {
-    public partial class UC_VisoinTest : UserControl
+    public partial class UC_WrittenTest : UserControl
     {
+
         clsLocalDrivingLicnseViewBl View = new clsLocalDrivingLicnseViewBl();
         clsTestAppointmentsBL Test;
         int LID;
 
-       public enum enmode
-        {
-            Addnew,
-            Update
-        }
-
-       public enmode Mode;
-
-        public UC_VisoinTest()
+        public UC_WrittenTest()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
-        }
-
-
-        public void _LoadData(int TestAppoitnemntID, int licenceID )
+        public void _LoadData(int TestAppoitnemntID, int licenceID)
         {
             // if new application 
 
@@ -45,7 +35,7 @@ namespace DLVD_Project.ApplicationUC
             lbApplicatoinId.Text = View.LocalDrivingLicenseApplicationID.ToString();
             lbName.Text = View.FullName.ToString();
             lbClass.Text = View.ClassName.ToString();
-            lbTrial.Text = clsTestAppointmentsBL.isExist(licenceID).ToString();
+            lbTrial.Text = clsTestAppointmentsBL.isExistTest2(licenceID).ToString();
             if (lbTrial.Text == "0")
                 gbRetake.Enabled = false;
             else
@@ -53,10 +43,10 @@ namespace DLVD_Project.ApplicationUC
 
             LID = View.LocalDrivingLicenseApplicationID;
 
-            if (TestAppoitnemntID==-1)
+            if (TestAppoitnemntID == -1)
             {
-                Test= new clsTestAppointmentsBL();
-                Test.PaidFees = 10; // intial fees 
+                Test = new clsTestAppointmentsBL();
+                Test.PaidFees = 20; // intial fees 
                 dateTimePicker1.Format = DateTimePickerFormat.Custom;
                 dateTimePicker1.CustomFormat = "yyyy-MM-dd";
                 // Find the application info an fill them 
@@ -75,11 +65,9 @@ namespace DLVD_Project.ApplicationUC
                     gbRetake.Enabled = true;
                     lbTitle.Text = "Retake Test";
                     Test.PaidFees += 5;
-
                 }
 
                 return;
-
             }
 
 
@@ -94,7 +82,7 @@ namespace DLVD_Project.ApplicationUC
             dateTimePicker1.Text = Test.AppointmentDate.ToString();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-          
+
 
 
 
@@ -102,28 +90,28 @@ namespace DLVD_Project.ApplicationUC
         }
 
 
-        private void UC_VisoinTest_Load(object sender, EventArgs e)
+        private void UC_WrittenTest_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Test.TestTypeID = 1;
+            Test.TestTypeID = 2; // written test 
             Test.LocalDrivingLicenseApplicationID = LID;
             Test.AppointmentDate = dateTimePicker1.Value;
-       
+
             Test.CreatedByUserID = Globals.CurrentUser.UserID;
             Test.IsLocked = false;
 
 
-            if(Test.Save())
+            if (Test.Save())
             {
                 MessageBox.Show("Data Saved Succussfully");
                 lbTestID.Text = Test.TestAppointmentID.ToString();
-            }else
+            }
+            else
                 MessageBox.Show("Data Failed to be save ");
-
         }
     }
 }

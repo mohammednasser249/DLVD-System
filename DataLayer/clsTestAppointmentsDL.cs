@@ -47,6 +47,42 @@ where LocalDrivingLicenseApplicationID=@LID and TestTypeID=1 and IsLocked=1 ";
 
         }
 
+        public static int CountDLTest2(int LID)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string qurey = @"select COUNT(*)
+from TestAppointments
+where LocalDrivingLicenseApplicationID=@LID and TestTypeID=2 and IsLocked=1 ";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+
+            cmd.Parameters.AddWithValue("@LID", LID);
+            int Number = -1;
+
+            try
+            {
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null && int.TryParse(result.ToString(), out int Total))
+                {
+                    Number = Total;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+                conn.Close();
+            }
+            return Number;
+
+        }
+
+
 
         public static DataTable GetVisionTestAppointemntsDl(int LID)
         {
@@ -82,6 +118,40 @@ where LocalDrivingLicenseApplicationID=@LID and TestTypeID=1 ";
             return dt;
         }
 
+
+        public static DataTable GetWrittenTestAppointemntsDl(int LID)
+        {
+
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+            string query = @"select *
+from TestAppointments
+where LocalDrivingLicenseApplicationID=@LID and TestTypeID=2 ";
+
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            cmd.Parameters.AddWithValue("@LID", LID);
+
+            try
+            {
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
 
 
 

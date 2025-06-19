@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_TakeTest));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbDate = new System.Windows.Forms.Label();
             this.lbFees = new System.Windows.Forms.Label();
             this.lbTrial = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.lbDate = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,12 +70,22 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 3);
+            this.groupBox1.Location = new System.Drawing.Point(14, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(469, 478);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vision Test";
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDate.Location = new System.Drawing.Point(180, 385);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(42, 18);
+            this.lbDate.TabIndex = 37;
+            this.lbDate.Text = "[???]";
             // 
             // lbFees
             // 
@@ -268,16 +278,6 @@
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(350, 90);
             this.txtNotes.TabIndex = 43;
-            // 
-            // lbDate
-            // 
-            this.lbDate.AutoSize = true;
-            this.lbDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.Location = new System.Drawing.Point(180, 385);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(42, 18);
-            this.lbDate.TabIndex = 37;
-            this.lbDate.Text = "[???]";
             // 
             // UC_TakeTest
             // 

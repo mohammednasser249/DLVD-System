@@ -81,10 +81,21 @@ namespace BusinessLayer
             return clsTestAppointmentsDL.CountDL(LicenceID);
         }
 
+        public static int isExistTest2(int LicenceID)
+        {
+            return clsTestAppointmentsDL.CountDLTest2(LicenceID);
+        }
+
         public static DataTable GetVisionTestAppointemnts(int LicenceID)
         {
             return clsTestAppointmentsDL.GetVisionTestAppointemntsDl(LicenceID) ;      
         }
+
+        public static DataTable GetWrittenTestAppointemnts(int LicenceID)
+        {
+            return clsTestAppointmentsDL.GetWrittenTestAppointemntsDl(LicenceID);
+        }
+
 
         private bool _AddNewTestAppointment()
         {

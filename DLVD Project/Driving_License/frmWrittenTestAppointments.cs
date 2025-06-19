@@ -8,45 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace DLVD_Project.Driving_License
 {
-    public partial class frmVisionTestAppointemtns : Form
+    public partial class frmWrittenTestAppointments : Form
     {
-
         int LicnseId;
-
-        public frmVisionTestAppointemtns(int Id)
+        public frmWrittenTestAppointments(int iD)
         {
-
             InitializeComponent();
-            LicnseId=Id;
+            LicnseId = iD;    
         }
 
-        private void _GetAllVisionTest(int ID)
+        private void _GetAllWrittenTest(int ID)
         {
 
-            DataTable dt = clsTestAppointmentsBL.GetVisionTestAppointemnts(ID);
+            DataTable dt = clsTestAppointmentsBL.GetWrittenTestAppointemnts(ID);
             dataGridView1.DataSource = dt;
             dataGridView1.AllowUserToAddRows = false;
 
         }
 
-        private void frmVisionTestAppointemtns_Load(object sender, EventArgs e)
+        private void frmWrittenTestAppointments_Load(object sender, EventArgs e)
         {
             uC_ApplicatoinBasicInfo1.LoadData(LicnseId);
             uC_DrivingLicenseAppInfo1._LoadData(LicnseId);
-            _GetAllVisionTest(LicnseId);
+            _GetAllWrittenTest(LicnseId);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-
         {
-
-
-
-
             int x = -1;
             clsTestAppointmentsBL App = null;
 
@@ -77,32 +68,27 @@ namespace DLVD_Project.Driving_License
      dataGridView1.CurrentRow.Cells[0].Value != null &&
      dataGridView1.CurrentRow.Cells[0].Value != DBNull.Value)
             {
-                 Test = clsTestBL.FindTestByID(App.TestAppointmentID);
-              
-                if(Test!=null)
-                if (Test.TestResult == 1)
-                    check2 = false;
+                Test = clsTestBL.FindTestByID(App.TestAppointmentID);
+
+                if (Test != null)
+                    if (Test.TestResult == 1)
+                        check2 = false;
             }
-          
 
 
-         
-
-       
 
             if (check && check2)
             {
-                
-                frmMakeAVisionTests frm = new frmMakeAVisionTests(-1,LicnseId);
+
+                frmMakeAWrittenTest frm = new frmMakeAWrittenTest(-1, LicnseId);
                 frm.ShowDialog();
-                _GetAllVisionTest(LicnseId);
-    
+                _GetAllWrittenTest(LicnseId);
+
             }
-            else if(check==false && check2==true)
+            else if (check == false && check2 == true)
                 MessageBox.Show("Person Already have an active appointment for this test , you can not add new appointment  ");
             else
                 MessageBox.Show("Person Already have passed this test  ");
-
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,15 +112,14 @@ namespace DLVD_Project.Driving_License
 
             if (!check)
             {
-                frmMakeAVisionTests frm = new frmMakeAVisionTests((int)dataGridView1.CurrentRow.Cells[0].Value, LicnseId);
+                frmMakeAWrittenTest frm = new frmMakeAWrittenTest((int)dataGridView1.CurrentRow.Cells[0].Value, LicnseId);
                 frm.ShowDialog();
-                _GetAllVisionTest(LicnseId);
+                _GetAllWrittenTest(LicnseId);
             }
             else
                 MessageBox.Show("Appointment is locked person already sat for this test");
 
             // form of the person already has taken this test and it is locked 
-
         }
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -159,20 +144,20 @@ namespace DLVD_Project.Driving_License
             // Check for passing the test or not 
             bool check2 = true;
             clsTestBL Test = clsTestBL.FindTestByID(App.TestAppointmentID);
-            if (Test != null) {
+            if (Test != null)
+            {
                 if (Test.TestResult == 1 || Test.TestResult == 0)
                     check2 = false;
             }
 
             if (check2)
             {
-                frmTakeTest frm = new frmTakeTest((int)dataGridView1.CurrentRow.Cells[0].Value);
+                frmTakeWrittenTest frm = new frmTakeWrittenTest((int)dataGridView1.CurrentRow.Cells[0].Value);
                 frm.ShowDialog();
-                _GetAllVisionTest(LicnseId);
+                _GetAllWrittenTest(LicnseId);
             }
             else
                 MessageBox.Show("Person already has taken this test ");
-                    
         }
     }
 }

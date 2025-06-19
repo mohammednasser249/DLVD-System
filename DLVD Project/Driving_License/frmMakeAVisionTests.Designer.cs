@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uC_VisoinTest1 = new DLVD_Project.ApplicationUC.UC_VisoinTest();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.SuspendLayout();
             // 
             // uC_VisoinTest1
@@ -57,5 +59,6 @@
         #endregion
 
         private ApplicationUC.UC_VisoinTest uC_VisoinTest1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }

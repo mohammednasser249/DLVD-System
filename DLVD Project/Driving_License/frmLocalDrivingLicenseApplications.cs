@@ -173,7 +173,45 @@ namespace DLVD_Project.Driving_License
 
         private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVisionTestAppointemtns frm = new frmVisionTestAppointemtns((int)dataGridView1.CurrentRow.Cells[0].Value);
+
+
+                frmVisionTestAppointemtns frm = new frmVisionTestAppointemtns((int)dataGridView1.CurrentRow.Cells[0].Value);
+                frm.ShowDialog();
+     
+            
+        }
+
+        private void scheduleTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsLocalDrivingLicnseViewBl View = clsLocalDrivingLicnseViewBl.FindByLicenseID((int)dataGridView1.CurrentRow.Cells[0].Value);
+
+            if(View.PassedTestCount==1)
+            {
+                visionTestToolStripMenuItem.Enabled = false;
+                scheduleStreetTestToolStripMenuItem.Enabled = false;
+                scheduleWrittenTestToolStripMenuItem.Enabled = true;
+
+            }
+            if (View.PassedTestCount==2)
+            {
+                visionTestToolStripMenuItem.Enabled = false;
+                scheduleWrittenTestToolStripMenuItem.Enabled = false;
+                scheduleStreetTestToolStripMenuItem.Enabled = true;
+
+            }
+
+            if (View.PassedTestCount==3)
+
+            {
+                scheduleStreetTestToolStripMenuItem.Enabled = false;
+                visionTestToolStripMenuItem.Enabled = false;
+                scheduleWrittenTestToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmWrittenTestAppointments frm = new frmWrittenTestAppointments((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
     }
