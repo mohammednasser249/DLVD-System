@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -125,5 +126,45 @@ where ApplicationID=@applicationID
 
             return isFound;
         }
+
+        public static DataTable GetAllLocalLicnsesDL(int ID)
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string qurey = @"select L.LicenseID,L.ApplicationID,Lc.ClassName,L.IssueDate,L.ExpirationDate,L.IsActive
+from Licenses L , LicenseClasses Lc	,LocalDrivingLicenseApplications Lo
+where Lo.ApplicationID=L.ApplicationID and L.LicenseClass=Lc.LicenseClassID
+and LocalDrivingLicenseApplicationID=@ID";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+
+            cmd.Parameters.AddWithValue("@ID", ID);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                dt.Load(reader);
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+            conn.Close(); }
+        
+        return dt;
+        }
+
+
+
+
     }
 }
