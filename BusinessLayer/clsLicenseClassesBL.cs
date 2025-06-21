@@ -39,5 +39,10 @@ namespace BusinessLayer
             return clsLicenseClassDl.GetAllLicenseClassesDL();
         }
 
+        public static int GetDefaultValidLength(int licenceid)
+        {
+           return clsLicenseClassDl.GetDefaultValidLength(licenceid);
+        }
+
     }
 }

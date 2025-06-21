@@ -22,9 +22,32 @@ namespace BusinessLayer
         public clsLocalDrivingLicenseApplicationsBL()
         {
             LocalDrivingLicenseApplicationID = 0;
-            LicenseClassID = 0;
+            ApplicationId = 0;
             LicenseClassID = 0;
         }
+
+        public clsLocalDrivingLicenseApplicationsBL(int localid ,int  appid , int licenceid)
+        {
+            LocalDrivingLicenseApplicationID = localid;
+            ApplicationId = appid;
+            LicenseClassID = licenceid;
+        }
+
+        // Find 
+
+        public static clsLocalDrivingLicenseApplicationsBL FindbyID(int id)
+        {
+            int ApplicationID = 0;
+            int LicenseClassID = 0;
+
+            if (clsLocalDrivingLicenseApplicationsDL.FindByIDDL(id,ref  ApplicationID,ref LicenseClassID))
+            {
+                return new clsLocalDrivingLicenseApplicationsBL(id,ApplicationID, LicenseClassID);
+            }
+            return null;
+
+        }
+
 
         public static DataTable GetLocalDrivingLicenseApplications()
         {

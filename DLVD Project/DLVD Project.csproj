@@ -62,6 +62,12 @@
     <Compile Include="ApplicationUC\UC_ApplicatoinBasicInfo.Designer.cs">
       <DependentUpon>UC_ApplicatoinBasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_DriverLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_DriverLicenseInfo.Designer.cs">
+      <DependentUpon>UC_DriverLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_DrivingLicenseAppInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     <Compile Include="Driving_License\frmApplicationTypes.Designer.cs">
       <DependentUpon>frmApplicationTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driving_License\frmDrivingLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmDrivingLicenseInfo.Designer.cs">
+      <DependentUpon>frmDrivingLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Driving_License\frmEditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +139,12 @@
     </Compile>
     <Compile Include="Driving_License\frmEditTestTypes.Designer.cs">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmIssueDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmIssueDrivingLicense.Designer.cs">
+      <DependentUpon>frmIssueDrivingLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmLocalDrivingLicenseApplications.cs">
       <SubType>Form</SubType>
@@ -290,6 +308,9 @@
     <EmbeddedResource Include="ApplicationUC\UC_ApplicatoinBasicInfo.resx">
       <DependentUpon>UC_ApplicatoinBasicInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_DriverLicenseInfo.resx">
+      <DependentUpon>UC_DriverLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_DrivingLicenseAppInfo.resx">
       <DependentUpon>UC_DrivingLicenseAppInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,11 +338,17 @@
     <EmbeddedResource Include="Driving_License\frmApplicationTypes.resx">
       <DependentUpon>frmApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmDrivingLicenseInfo.resx">
+      <DependentUpon>frmDrivingLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmEditApplicationType.resx">
       <DependentUpon>frmEditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmEditTestTypes.resx">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmIssueDrivingLicense.resx">
+      <DependentUpon>frmIssueDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmLocalDrivingLicenseApplications.resx">
       <DependentUpon>frmLocalDrivingLicenseApplications.cs</DependentUpon>

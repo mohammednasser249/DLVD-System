@@ -185,43 +185,8 @@ namespace DLVD_Project.Driving_License
         {
             clsLocalDrivingLicnseViewBl View = clsLocalDrivingLicnseViewBl.FindByLicenseID((int)dataGridView1.CurrentRow.Cells[0].Value);
 
-            if(View.PassedTestCount==0)
-            {
-                scheduleTestToolStripMenuItem.Enabled = true;
-                visionTestToolStripMenuItem.Enabled = true;
-                scheduleStreetTestToolStripMenuItem.Enabled = false;
-                scheduleWrittenTestToolStripMenuItem.Enabled = false;
+           
 
-            }
-
-
-            if (View.PassedTestCount==1)
-            {
-                visionTestToolStripMenuItem.Enabled = false;
-                scheduleStreetTestToolStripMenuItem.Enabled = false;
-                scheduleWrittenTestToolStripMenuItem.Enabled = true;
-                scheduleTestToolStripMenuItem.Enabled = true;
-
-
-            }
-            if (View.PassedTestCount==2)
-            {
-                visionTestToolStripMenuItem.Enabled = false;
-                scheduleWrittenTestToolStripMenuItem.Enabled = false;
-                scheduleStreetTestToolStripMenuItem.Enabled = true;
-                scheduleTestToolStripMenuItem.Enabled = true;
-
-
-            }
-
-            if (View.PassedTestCount==3)
-
-            {
-                scheduleStreetTestToolStripMenuItem.Enabled = false;
-                visionTestToolStripMenuItem.Enabled = false;
-                scheduleWrittenTestToolStripMenuItem.Enabled = false;
-                scheduleTestToolStripMenuItem.Enabled = false;
-            }
         }
 
         private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -235,6 +200,91 @@ namespace DLVD_Project.Driving_License
             frmStreetTestAppointments frm = new frmStreetTestAppointments((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
 
+        }
+
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIssueDrivingLicense frm = new frmIssueDrivingLicense((int)dataGridView1.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();   
+        
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            clsLocalDrivingLicnseViewBl View = clsLocalDrivingLicnseViewBl.FindByLicenseID((int)dataGridView1.CurrentRow.Cells[0].Value);
+
+            clsLocalDrivingLicenseApplicationsBL LocalApplication = clsLocalDrivingLicenseApplicationsBL.FindbyID((int)dataGridView1.CurrentRow.Cells[0].Value);
+
+
+
+            if (View.PassedTestCount == 0)
+            {
+                scheduleTestToolStripMenuItem.Enabled = true;
+
+                visionTestToolStripMenuItem.Enabled = true;
+                scheduleStreetTestToolStripMenuItem.Enabled = false;
+                scheduleWrittenTestToolStripMenuItem.Enabled = false;
+                showLicenseToolStripMenuItem.Enabled = false;
+                issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = false;
+
+
+            }
+
+
+            if (View.PassedTestCount == 1)
+            {
+                scheduleTestToolStripMenuItem.Enabled = true;
+
+                visionTestToolStripMenuItem.Enabled = false;
+                scheduleStreetTestToolStripMenuItem.Enabled = false;
+                scheduleWrittenTestToolStripMenuItem.Enabled = true;
+                issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = false;
+                showLicenseToolStripMenuItem.Enabled = false;
+
+
+
+            }
+            if (View.PassedTestCount == 2)
+            {
+                scheduleTestToolStripMenuItem.Enabled = true;
+
+                visionTestToolStripMenuItem.Enabled = false;
+                scheduleWrittenTestToolStripMenuItem.Enabled = false;
+                scheduleStreetTestToolStripMenuItem.Enabled = true;
+                issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = false;
+                showLicenseToolStripMenuItem.Enabled = false;
+
+
+
+
+            }
+
+            if (View.PassedTestCount == 3)
+
+            {
+                issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = true;
+                editApplicationToolStripMenuItem.Enabled = false;
+                cancelApplicationToolStripMenuItem.Enabled = false;
+                deleteApplicationToolStripMenuItem.Enabled = false;
+                scheduleTestToolStripMenuItem.Enabled = false;  
+
+            }
+
+
+            if (clsLicenseBL.IsThereAlicenceForApplicatoin(LocalApplication.ApplicationId))
+            {
+                issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = false;
+                showLicenseToolStripMenuItem.Enabled = true;   
+            }else
+            {
+                showLicenseToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDrivingLicenseInfo frm = new frmDrivingLicenseInfo((int)dataGridView1.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 

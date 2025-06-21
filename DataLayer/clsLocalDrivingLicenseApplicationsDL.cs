@@ -190,9 +190,51 @@ where LocalDrivingLicenseApplicationID =@ApplicationID";
         
         }
 
-        }
+
+        public static bool FindByIDDL(int Id , ref int Appid , ref int licenceclass)
+        {
+
+            SqlConnection conn = new SqlConnection (clsDatabaseSettings.StringConnection);
+
+            string qurey = @"select *
+from LocalDrivingLicenseApplications
+where LocalDrivingLicenseApplicationID=@Id";
+
+            SqlCommand command = new SqlCommand(qurey , conn);
+            command.Parameters.AddWithValue("@Id", Id);
+
+            bool isfounded = false;
+
+            try
+            {
+                conn.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read()) {
+                    Appid = (int)reader["ApplicationID"];
+                    licenceclass = (int)reader["LicenseClassID"];
+                    isfounded = true;
+                }
+
+                reader.Close();
+            } catch (Exception ex)
+            {
+
+            Console.WriteLine(ex.Message); }
+        finally {
+            conn.Close();
+            
+            }
+            return isfounded;
+
 
         }
+
+
+
+        }
+
+ }
 
     
 

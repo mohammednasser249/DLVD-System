@@ -46,5 +46,47 @@ namespace DataLayer
         }
 
 
+        public static int GetDefaultValidLength(int licenceid)
+        {
+
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+
+            string query = @"select DefaultValidityLength
+from LicenseClasses
+where LicenseClassID=@licenceid";
+
+            SqlCommand command = new SqlCommand(query, conn);
+
+            command.Parameters.AddWithValue("@licenceid", licenceid);
+
+            int length = -1;
+
+            try
+            {
+                conn.Open();
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int len))
+                {
+                    length = len;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+                conn.Close(); }
+
+            return length;
+
+        }
+    
+
+
+
     }
 }
