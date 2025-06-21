@@ -1,6 +1,7 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -105,6 +106,12 @@ namespace BusinessLayer
 
         }
 
+        // Get All local Licnses 
+
+        public static DataTable GetAllLocalLicnses(int ID)
+        {
+          return  clsLicenseDL.GetAllLocalLicnsesDL(ID);
+        }
 
 
         private bool _AddNewLicence()

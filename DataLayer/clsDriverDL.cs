@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -72,6 +73,37 @@ namespace DataLayer
             }
 
             return driverID;
+        }
+
+        public static DataTable GetAllDriversDL()
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string qurey = @"select *
+                    from Drivers_View";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+
+            try
+            {
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                dt.Load(reader);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+
+            conn.Close(); }
+        return dt;
         }
 
     }
