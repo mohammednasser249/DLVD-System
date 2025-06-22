@@ -86,5 +86,11 @@ namespace DLVD_Project
             frmLocalDrivingLicenseApplications frm = new frmLocalDrivingLicenseApplications();
             frm.ShowDialog();
         }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDrivers frm = new frmDrivers();
+            frm.ShowDialog();
+        }
     }
 }
