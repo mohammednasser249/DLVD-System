@@ -95,6 +95,42 @@ namespace BusinessLayer
             return null;
         }
 
+        public static clsApplications FindByID(int LicenseID)
+        {
+            // Define local variables to receive data from DL method
+            int applicationID = 0;
+            int applicantPersonID = 0;
+            DateTime applicationDate = DateTime.MinValue;
+            int applicationTypeID = 0;
+            int applicationStatus = 0;
+            DateTime lastStatusDate = DateTime.MinValue;
+            int paidFees = 0;
+            int createdByUserID = 0;
+
+            // Assume this method fills the above variables and returns true if found
+            bool isFound = clsApplicationsDL.FindByIDDL(
+                LicenseID,
+                ref applicationID,
+                ref applicantPersonID,
+                ref applicationDate,
+                ref applicationTypeID,
+                ref applicationStatus,
+                ref lastStatusDate,
+                ref paidFees,
+                ref createdByUserID
+            );
+
+            if (isFound)
+            {
+                return new clsApplications(applicationID, applicantPersonID, applicationDate,
+                                           applicationTypeID, applicationStatus, lastStatusDate,
+                                           paidFees, createdByUserID);
+            }
+
+            // Not found, return null
+            return null;
+        }
+
 
         private bool _AddNewApplication()
         {

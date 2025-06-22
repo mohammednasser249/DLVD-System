@@ -94,6 +94,29 @@ namespace BusinessLayer
 
         }
 
+        public static clsLicenseBL FindByD(int LicenseID)
+        {
+            int ApplicatoinID = 0;
+            int DriverID = 0;
+            int LicenseClass = 0;
+            DateTime IssueDate = DateTime.MinValue;
+            DateTime ExpirationDate = DateTime.MinValue;
+            string Notes = null;
+            decimal PaidFees = 0.0m;
+            bool IsActive = false;
+            int IssueReason = 0;
+            int CreatedByUserID = 0;
+
+            if (clsLicenseDL.FindLicenseDl(LicenseID, ref ApplicatoinID, ref DriverID, ref LicenseClass, ref IssueDate, ref ExpirationDate, ref Notes, ref PaidFees, ref IsActive, ref IssueReason, ref CreatedByUserID))
+            {
+                return new clsLicenseBL(LicenseID, ApplicatoinID, DriverID, LicenseClass, IssueDate, ExpirationDate, Notes, PaidFees, IsActive, IssueReason, CreatedByUserID);
+            }
+            return null;
+
+
+
+        }
+
 
         // check if there is licence for a specific application 
 
@@ -112,6 +135,7 @@ namespace BusinessLayer
         {
           return  clsLicenseDL.GetAllLocalLicnsesDL(ID);
         }
+
 
 
         private bool _AddNewLicence()

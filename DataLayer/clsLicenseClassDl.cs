@@ -85,7 +85,42 @@ where LicenseClassID=@licenceid";
 
         }
     
+        public static bool GetClassNameDl(ref string ClassName,int ClassID)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
 
+            string qurey = @"select ClassName
+from LicenseClasses
+where LicenseClassID=@ClassID";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+            cmd.Parameters.AddWithValue("@ClassID",ClassID);
+
+            bool found = false;
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    ClassName = (string)reader["ClassName"];
+                    found = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+            conn.Close(); }
+        return found;
+        }
+        
 
 
     }

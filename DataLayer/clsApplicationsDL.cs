@@ -115,6 +115,60 @@ namespace DataLayer
             return isFound;
         }
 
+        public static bool FindByIDDL(
+int licenseID,
+ref int applicationID,
+ref int applicantPersonID,
+ref DateTime applicationDate,
+ref int applicationTypeID,
+ref int applicationStatus,
+ref DateTime lastStatusDate,
+ref int paidFees,
+ref int createdByUserID
+)
+        {
+            bool isFound = false;
+
+            using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
+            {
+                string query = @"
+select *
+from Applications
+where ApplicationID=@licenseID
+";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@LicenseID", licenseID);
+
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        applicationStatus = Convert.ToInt32(reader["ApplicationStatus"]);
+                        paidFees = Convert.ToInt32(reader["PaidFees"]);
+                        applicationTypeID = Convert.ToInt32(reader["ApplicationTypeID"]);
+                        applicantPersonID = Convert.ToInt32(reader["ApplicantPersonID"]);
+                        applicationDate = Convert.ToDateTime(reader["ApplicationDate"]);
+                        lastStatusDate = Convert.ToDateTime(reader["LastStatusDate"]);
+                        createdByUserID = Convert.ToInt32(reader["CreatedByUserID"]);
+
+                        isFound = true;
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error finding application by LicenseID", ex);
+                }
+            }
+
+            return isFound;
+        }
+
 
 
 
