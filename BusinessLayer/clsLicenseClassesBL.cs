@@ -44,5 +44,18 @@ namespace BusinessLayer
            return clsLicenseClassDl.GetDefaultValidLength(licenceid);
         }
 
+
+        public static string GetClassName(int ClassID)
+        {
+            string Classname = "";
+
+            if (clsLicenseClassDl.GetClassNameDl(ref Classname, ClassID))
+            {
+                return Classname;
+            }
+            else
+                return "";
+        }
+
     }
 }

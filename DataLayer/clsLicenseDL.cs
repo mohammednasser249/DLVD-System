@@ -127,6 +127,44 @@ where ApplicationID=@applicationID
             return isFound;
         }
 
+        public static bool FindLicenseDl( int LicenseID, ref int applicationID, ref int driverID, ref int licenseClass, ref DateTime issueDate, ref DateTime expirationDate, ref string notes, ref decimal paidFees, ref bool isActive, ref int issueReason, ref int createdByUserID)
+        {
+            bool isFound = false;
+
+            using (SqlConnection con = new SqlConnection(clsDatabaseSettings.StringConnection))
+            {
+                string query = @"select *
+from Licenses
+where LicenseID=@LicenseID;
+";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    isFound = true;
+
+                    applicationID = (int)reader["ApplicationID"];
+                    driverID = (int)reader["DriverID"];
+                    licenseClass = (int)reader["LicenseClass"];
+                    issueDate = (DateTime)reader["IssueDate"];
+                    expirationDate = (DateTime)reader["ExpirationDate"];
+                    notes = reader["Notes"] != DBNull.Value ? (string)reader["Notes"] : null;
+                    paidFees = (decimal)reader["PaidFees"];
+                    isActive = (bool)reader["IsActive"];
+                    issueReason = Convert.ToInt32(reader["IssueReason"]);
+                    createdByUserID = (int)reader["CreatedByUserID"];
+                }
+
+                reader.Close();
+            }
+
+            return isFound;
+        }
         public static DataTable GetAllLocalLicnsesDL(int ID)
         {
 

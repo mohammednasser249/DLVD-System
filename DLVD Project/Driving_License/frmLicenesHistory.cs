@@ -23,6 +23,12 @@ namespace DLVD_Project.Driving_License
         private void frmLicenesHistory_Load(object sender, EventArgs e)
         {
             clsApplications App = clsApplications.FindApplicationByLicnceID(LID);
+            if(App==null)
+            {
+                uC_LicenseHist1._LoadDataLocalLiecens(LID);
+                uC_ShowPersonDetails1.LoadPersonIDToUserControl(LID);
+                return;
+            }
             uC_LicenseHist1._LoadDataLocalLiecens(App.ApplicantPersonID);
             uC_ShowPersonDetails1.LoadPersonIDToUserControl(App.ApplicantPersonID);
 

@@ -86,11 +86,11 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(955, 143);
+            this.dataGridView1.Size = new System.Drawing.Size(955, 141);
             this.dataGridView1.TabIndex = 1;
             // 
             // menuStrip1
@@ -101,7 +101,7 @@
             this.internationalToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(955, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(955, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -110,12 +110,14 @@
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
             this.localToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.localToolStripMenuItem.Text = "Local";
+            this.localToolStripMenuItem.Click += new System.EventHandler(this.localToolStripMenuItem_Click);
             // 
             // internationalToolStripMenuItem
             // 
             this.internationalToolStripMenuItem.Name = "internationalToolStripMenuItem";
             this.internationalToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.internationalToolStripMenuItem.Text = "International";
+            this.internationalToolStripMenuItem.Click += new System.EventHandler(this.internationalToolStripMenuItem_Click);
             // 
             // UC_LicenseHist
             // 

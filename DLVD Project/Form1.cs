@@ -92,5 +92,11 @@ namespace DLVD_Project
             frmDrivers frm = new frmDrivers();
             frm.ShowDialog();
         }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewNational_License_Application frm = new frmNewNational_License_Application();
+            frm.ShowDialog();
+        }
     }
 }

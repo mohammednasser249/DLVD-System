@@ -74,6 +74,12 @@
     <Compile Include="ApplicationUC\UC_DrivingLicenseAppInfo.Designer.cs">
       <DependentUpon>UC_DrivingLicenseAppInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_InternatinalLicneseApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_InternatinalLicneseApplicationInfo.Designer.cs">
+      <DependentUpon>UC_InternatinalLicneseApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_IssueDrivingLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,6 +199,12 @@
     </Compile>
     <Compile Include="Driving_License\frmNewLocalDrivingLicense.Designer.cs">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmNewNational License Application.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmNewNational License Application.Designer.cs">
+      <DependentUpon>frmNewNational License Application.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmStreetTestAppointments.cs">
       <SubType>Form</SubType>
@@ -332,6 +344,9 @@
     <EmbeddedResource Include="ApplicationUC\UC_DrivingLicenseAppInfo.resx">
       <DependentUpon>UC_DrivingLicenseAppInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_InternatinalLicneseApplicationInfo.resx">
+      <DependentUpon>UC_InternatinalLicneseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_IssueDrivingLicense.resx">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmNewLocalDrivingLicense.resx">
       <DependentUpon>frmNewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmNewNational License Application.resx">
+      <DependentUpon>frmNewNational License Application.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmStreetTestAppointments.resx">
       <DependentUpon>frmStreetTestAppointments.cs</DependentUpon>
