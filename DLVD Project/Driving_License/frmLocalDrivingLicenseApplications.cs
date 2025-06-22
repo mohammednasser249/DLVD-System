@@ -286,6 +286,12 @@ namespace DLVD_Project.Driving_License
             frmDrivingLicenseInfo frm = new frmDrivingLicenseInfo((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void showPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLicenesHistory frm = new frmLicenesHistory((int)dataGridView1.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 
 }

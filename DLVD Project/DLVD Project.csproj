@@ -80,6 +80,12 @@
     <Compile Include="ApplicationUC\UC_IssueDrivingLicense.Designer.cs">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_LicenseHist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_LicenseHist.Designer.cs">
+      <DependentUpon>UC_LicenseHist.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_StreetTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     </Compile>
     <Compile Include="Driving_License\frmIssueDrivingLicense.Designer.cs">
       <DependentUpon>frmIssueDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmLicenesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmLicenesHistory.Designer.cs">
+      <DependentUpon>frmLicenesHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmLocalDrivingLicenseApplications.cs">
       <SubType>Form</SubType>
@@ -323,6 +335,9 @@
     <EmbeddedResource Include="ApplicationUC\UC_IssueDrivingLicense.resx">
       <DependentUpon>UC_IssueDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_LicenseHist.resx">
+      <DependentUpon>UC_LicenseHist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_StreetTest.resx">
       <DependentUpon>UC_StreetTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmIssueDrivingLicense.resx">
       <DependentUpon>frmIssueDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmLicenesHistory.resx">
+      <DependentUpon>frmLicenesHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmLocalDrivingLicenseApplications.resx">
       <DependentUpon>frmLocalDrivingLicenseApplications.cs</DependentUpon>

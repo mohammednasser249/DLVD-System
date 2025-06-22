@@ -111,3 +111,5 @@ C:\Users\Asus\Desktop\New DvLD Project\DLVD-System\DLVD Project\obj\Debug\DLVD P
 C:\Users\Asus\Desktop\New DvLD Project\DLVD-System\DLVD Project\obj\Debug\DLVD Project.exe
 C:\Users\Asus\Desktop\New DvLD Project\DLVD-System\DLVD Project\obj\Debug\DLVD Project.pdb
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmDrivers.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_LicenseHist.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmLicenesHistory.resources

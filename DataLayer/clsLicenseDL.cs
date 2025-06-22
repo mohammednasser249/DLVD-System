@@ -134,9 +134,9 @@ where ApplicationID=@applicationID
             SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
 
             string qurey = @"select L.LicenseID,L.ApplicationID,Lc.ClassName,L.IssueDate,L.ExpirationDate,L.IsActive
-from Licenses L , LicenseClasses Lc	,LocalDrivingLicenseApplications Lo
-where Lo.ApplicationID=L.ApplicationID and L.LicenseClass=Lc.LicenseClassID
-and LocalDrivingLicenseApplicationID=@ID";
+from Licenses L , LicenseClasses Lc	,LocalDrivingLicenseApplications Lo , Applications A
+where Lo.ApplicationID=L.ApplicationID and L.LicenseClass=Lc.LicenseClassID and A.ApplicationID =Lo.ApplicationID
+and ApplicantPersonID=@ID";
 
             SqlCommand cmd = new SqlCommand(qurey, conn);
 
