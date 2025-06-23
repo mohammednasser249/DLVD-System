@@ -66,6 +66,8 @@ namespace DLVD_Project.ApplicationUC
                 Test.IsLocked = true;
                 Test.Save(); // to save it is locked and finished 
                 MessageBox.Show("Saved Succussfully");
+                View.PassedTestCount++;
+
             }
             else
                 MessageBox.Show("Failed to be saved");
