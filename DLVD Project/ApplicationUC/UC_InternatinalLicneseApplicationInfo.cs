@@ -184,5 +184,10 @@ namespace DLVD_Project.ApplicationUC
             frmLicenesHistory frm = new frmLicenesHistory(Person.ID);
             frm.ShowDialog();
         }
+
+        private void linkShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

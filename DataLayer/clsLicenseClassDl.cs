@@ -120,7 +120,43 @@ where LicenseClassID=@ClassID";
             conn.Close(); }
         return found;
         }
-        
+
+        public static bool GetClassFeesDl(ref decimal ClassFees, int ClassID)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string qurey = @"select ClassFees
+from LicenseClasses
+where LicenseClassID=@ClassID";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+            cmd.Parameters.AddWithValue("@ClassID", ClassID);
+
+            bool found = false;
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    ClassFees = (decimal)reader["ClassFees"];
+                    found = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+                conn.Close();
+            }
+            return found;
+        }
 
 
     }
