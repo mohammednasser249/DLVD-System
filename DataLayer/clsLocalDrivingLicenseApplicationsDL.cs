@@ -118,7 +118,7 @@ and A.ApplicantPersonID=@personid  and LV.Status='New' and Lv.LocalDrivingLicens
             return applicationId;
         }
 
-
+        
         public static bool CancelApplication(int ApplicationID)
         {
             SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
@@ -154,6 +154,45 @@ where A.ApplicationID =L.ApplicationID and L.LocalDrivingLicenseApplicationID=@A
         return isupdated;
         
         }
+
+        public static bool UpdateApplicationStatusDL(int ApplicationID)
+        {
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+
+            string query = @"update A 
+set A.ApplicationStatus=3
+from Applications A , LocalDrivingLicenseApplications L
+where A.ApplicationID =L.ApplicationID and L.LocalDrivingLicenseApplicationID=@ApplicationID";
+
+            SqlCommand command = new SqlCommand(query, conn);
+
+            bool isupdated = false;
+
+            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+            try
+            {
+                conn.Open();
+                int rowsaffected = command.ExecuteNonQuery();
+                if (rowsaffected > 0)
+                {
+                    isupdated = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+            }
+
+            return isupdated;
+
+        }
+
 
         public static bool DeleteApplication(int ApplicationID)
         {

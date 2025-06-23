@@ -65,8 +65,8 @@ namespace DLVD_Project.Driving_License
             if (Licence.Save())
             {
                 MessageBox.Show($"License Issued Succussfully with licence Id = {Licence.LicenseID} ");
-              
-                    
+
+                clsLocalDrivingLicenseApplicationsBL.UpdateApplicationStatus(LicenceID);
 
             }
             else

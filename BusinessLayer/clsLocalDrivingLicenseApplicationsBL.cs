@@ -94,6 +94,11 @@ namespace BusinessLayer
             return clsLocalDrivingLicenseApplicationsDL.CancelApplication(ApplicationId);
         }
 
+        public static bool UpdateApplicationStatus(int ApplicationId)
+        {
+            return clsLocalDrivingLicenseApplicationsDL.UpdateApplicationStatusDL(ApplicationId);
+        }
+
         public static bool DeleteApplicationBL(int ApplicationID)
         {
             return clsLocalDrivingLicenseApplicationsDL.DeleteApplication(ApplicationID);

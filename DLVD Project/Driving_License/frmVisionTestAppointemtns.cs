@@ -169,6 +169,7 @@ namespace DLVD_Project.Driving_License
                 frmTakeTest frm = new frmTakeTest((int)dataGridView1.CurrentRow.Cells[0].Value);
                 frm.ShowDialog();
                 _GetAllVisionTest(LicnseId);
+
             }
             else
                 MessageBox.Show("Person already has taken this test ");

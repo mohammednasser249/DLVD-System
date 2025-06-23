@@ -177,6 +177,7 @@ namespace DLVD_Project.Driving_License
 
                 frmVisionTestAppointemtns frm = new frmVisionTestAppointemtns((int)dataGridView1.CurrentRow.Cells[0].Value);
                 frm.ShowDialog();
+            _GetAllLocalDrivingLicnseApplications();
      
             
         }
@@ -193,19 +194,24 @@ namespace DLVD_Project.Driving_License
         {
             frmWrittenTestAppointments frm = new frmWrittenTestAppointments((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            _GetAllLocalDrivingLicnseApplications();
+
         }
 
         private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmStreetTestAppointments frm = new frmStreetTestAppointments((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            _GetAllLocalDrivingLicnseApplications();
+
 
         }
 
         private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmIssueDrivingLicense frm = new frmIssueDrivingLicense((int)dataGridView1.CurrentRow.Cells[0].Value);
-            frm.ShowDialog();   
+            frm.ShowDialog();
+            _GetAllLocalDrivingLicnseApplications();
         
         }
 
