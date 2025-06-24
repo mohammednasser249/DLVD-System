@@ -110,5 +110,17 @@ namespace DLVD_Project
             frmReplacementLicense frm = new frmReplacementLicense();
             frm.ShowDialog();
         }
+
+        private void detainLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmDetainLicense frm = new frmDetainLicense();
+               frm.ShowDialog();
+        }
+
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseLicense frm = new frmReleaseLicense();
+            frm.ShowDialog();
+        }
     }
 }

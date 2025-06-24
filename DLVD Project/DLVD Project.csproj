@@ -62,6 +62,12 @@
     <Compile Include="ApplicationUC\UC_ApplicatoinBasicInfo.Designer.cs">
       <DependentUpon>UC_ApplicatoinBasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_DetainLicense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_DetainLicense.Designer.cs">
+      <DependentUpon>UC_DetainLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_DriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="ApplicationUC\UC_LicenseHist.Designer.cs">
       <DependentUpon>UC_LicenseHist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_ReleaseLiecense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_ReleaseLiecense.Designer.cs">
+      <DependentUpon>UC_ReleaseLiecense.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationUC\UC_RenewLicenseApplication.cs">
       <SubType>UserControl</SubType>
@@ -145,6 +157,12 @@
     </Compile>
     <Compile Include="Driving_License\frmApplicationTypes.Designer.cs">
       <DependentUpon>frmApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmDetainLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmDetainLicense.Designer.cs">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmDrivers.cs">
       <SubType>Form</SubType>
@@ -217,6 +235,12 @@
     </Compile>
     <Compile Include="Driving_License\frmNewNational License Application.Designer.cs">
       <DependentUpon>frmNewNational License Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmReleaseLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmReleaseLicense.Designer.cs">
+      <DependentUpon>frmReleaseLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmRenewDrivingLicense.cs">
       <SubType>Form</SubType>
@@ -362,6 +386,9 @@
     <EmbeddedResource Include="ApplicationUC\UC_ApplicatoinBasicInfo.resx">
       <DependentUpon>UC_ApplicatoinBasicInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_DetainLicense.resx">
+      <DependentUpon>UC_DetainLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_DriverLicenseInfo.resx">
       <DependentUpon>UC_DriverLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_LicenseHist.resx">
       <DependentUpon>UC_LicenseHist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_ReleaseLiecense.resx">
+      <DependentUpon>UC_ReleaseLiecense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_RenewLicenseApplication.resx">
       <DependentUpon>UC_RenewLicenseApplication.cs</DependentUpon>
@@ -403,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmApplicationTypes.resx">
       <DependentUpon>frmApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmDetainLicense.resx">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmDrivers.resx">
       <DependentUpon>frmDrivers.cs</DependentUpon>
@@ -439,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmNewNational License Application.resx">
       <DependentUpon>frmNewNational License Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmReleaseLicense.resx">
+      <DependentUpon>frmReleaseLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmRenewDrivingLicense.resx">
       <DependentUpon>frmRenewDrivingLicense.cs</DependentUpon>
