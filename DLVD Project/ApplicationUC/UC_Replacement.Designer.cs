@@ -1,6 +1,6 @@
 ﻿namespace DLVD_Project.ApplicationUC
 {
-    partial class UC_RenewLicenseApplication
+    partial class UC_Replacement
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,28 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_RenewLicenseApplication));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Replacement));
             this.linkShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.linkShowhistory = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtNotes = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lbTotalFees = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.lbLicenseFees = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.lbCreateddBy = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.lbExpDate = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.lbOldLicnseID = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.lbFees = new System.Windows.Forms.Label();
-            this.lbisdate = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lbLID = new System.Windows.Forms.Label();
+            this.lbReplacedID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbApplicationDate = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -87,141 +77,76 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdLost = new System.Windows.Forms.RadioButton();
+            this.rdDamaged = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // linkShowLicenseInfo
             // 
             this.linkShowLicenseInfo.AutoSize = true;
             this.linkShowLicenseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkShowLicenseInfo.Location = new System.Drawing.Point(302, 637);
+            this.linkShowLicenseInfo.Location = new System.Drawing.Point(317, 572);
             this.linkShowLicenseInfo.Name = "linkShowLicenseInfo";
             this.linkShowLicenseInfo.Size = new System.Drawing.Size(209, 29);
-            this.linkShowLicenseInfo.TabIndex = 12;
+            this.linkShowLicenseInfo.TabIndex = 18;
             this.linkShowLicenseInfo.TabStop = true;
             this.linkShowLicenseInfo.Text = "Show License Info";
-            this.linkShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkShowLicenseInfo_LinkClicked);
             // 
             // linkShowhistory
             // 
             this.linkShowhistory.AutoSize = true;
             this.linkShowhistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkShowhistory.Location = new System.Drawing.Point(29, 637);
+            this.linkShowhistory.Location = new System.Drawing.Point(46, 572);
             this.linkShowhistory.Name = "linkShowhistory";
             this.linkShowhistory.Size = new System.Drawing.Size(244, 29);
-            this.linkShowhistory.TabIndex = 11;
+            this.linkShowhistory.TabIndex = 17;
             this.linkShowhistory.TabStop = true;
             this.linkShowhistory.Text = "Show License History";
             this.linkShowhistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkShowhistory_LinkClicked);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(759, 630);
+            this.button1.Location = new System.Drawing.Point(728, 565);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 50);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Renew";
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Issue Replacement";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtNotes);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.lbTotalFees);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.lbLicenseFees);
-            this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.lbCreateddBy);
             this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.lbExpDate);
-            this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Controls.Add(this.lbOldLicnseID);
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.lbFees);
-            this.groupBox3.Controls.Add(this.lbisdate);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.lbLID);
+            this.groupBox3.Controls.Add(this.lbReplacedID);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.lbApplicationDate);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.lbRApplicatoinID);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(34, 365);
+            this.groupBox3.Location = new System.Drawing.Point(51, 412);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(828, 259);
-            this.groupBox3.TabIndex = 9;
+            this.groupBox3.Size = new System.Drawing.Size(828, 134);
+            this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Application info";
-            // 
-            // txtNotes
-            // 
-            this.txtNotes.Location = new System.Drawing.Point(105, 193);
-            this.txtNotes.Multiline = true;
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(668, 55);
-            this.txtNotes.TabIndex = 48;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(24, 193);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(66, 19);
-            this.label25.TabIndex = 47;
-            this.label25.Text = "Notes :";
-            // 
-            // lbTotalFees
-            // 
-            this.lbTotalFees.AutoSize = true;
-            this.lbTotalFees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalFees.Location = new System.Drawing.Point(622, 159);
-            this.lbTotalFees.Name = "lbTotalFees";
-            this.lbTotalFees.Size = new System.Drawing.Size(42, 18);
-            this.lbTotalFees.TabIndex = 46;
-            this.lbTotalFees.Text = "[$$$]";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(428, 158);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(99, 19);
-            this.label23.TabIndex = 45;
-            this.label23.Text = "Total Fees :";
-            // 
-            // lbLicenseFees
-            // 
-            this.lbLicenseFees.AutoSize = true;
-            this.lbLicenseFees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLicenseFees.Location = new System.Drawing.Point(199, 159);
-            this.lbLicenseFees.Name = "lbLicenseFees";
-            this.lbLicenseFees.Size = new System.Drawing.Size(42, 18);
-            this.lbLicenseFees.TabIndex = 44;
-            this.lbLicenseFees.Text = "[$$$]";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(24, 158);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(124, 19);
-            this.label21.TabIndex = 43;
-            this.label21.Text = "License Fees :";
             // 
             // lbCreateddBy
             // 
             this.lbCreateddBy.AutoSize = true;
             this.lbCreateddBy.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreateddBy.Location = new System.Drawing.Point(621, 130);
+            this.lbCreateddBy.Location = new System.Drawing.Point(640, 101);
             this.lbCreateddBy.Name = "lbCreateddBy";
             this.lbCreateddBy.Size = new System.Drawing.Size(42, 18);
             this.lbCreateddBy.TabIndex = 42;
@@ -231,37 +156,17 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(428, 129);
+            this.label28.Location = new System.Drawing.Point(428, 100);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(110, 19);
             this.label28.TabIndex = 41;
             this.label28.Text = "Created By :";
             // 
-            // lbExpDate
-            // 
-            this.lbExpDate.AutoSize = true;
-            this.lbExpDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbExpDate.Location = new System.Drawing.Point(621, 101);
-            this.lbExpDate.Name = "lbExpDate";
-            this.lbExpDate.Size = new System.Drawing.Size(42, 18);
-            this.lbExpDate.TabIndex = 40;
-            this.lbExpDate.Text = "[???]";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(428, 100);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(141, 19);
-            this.label26.TabIndex = 39;
-            this.label26.Text = "Expiration Date :";
-            // 
             // lbOldLicnseID
             // 
             this.lbOldLicnseID.AutoSize = true;
             this.lbOldLicnseID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOldLicnseID.Location = new System.Drawing.Point(621, 71);
+            this.lbOldLicnseID.Location = new System.Drawing.Point(640, 70);
             this.lbOldLicnseID.Name = "lbOldLicnseID";
             this.lbOldLicnseID.Size = new System.Drawing.Size(42, 18);
             this.lbOldLicnseID.TabIndex = 38;
@@ -281,51 +186,31 @@
             // 
             this.lbFees.AutoSize = true;
             this.lbFees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFees.Location = new System.Drawing.Point(199, 128);
+            this.lbFees.Location = new System.Drawing.Point(199, 101);
             this.lbFees.Name = "lbFees";
-            this.lbFees.Size = new System.Drawing.Size(16, 18);
+            this.lbFees.Size = new System.Drawing.Size(42, 18);
             this.lbFees.TabIndex = 36;
-            this.lbFees.Text = "7";
-            // 
-            // lbisdate
-            // 
-            this.lbisdate.AutoSize = true;
-            this.lbisdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbisdate.Location = new System.Drawing.Point(199, 97);
-            this.lbisdate.Name = "lbisdate";
-            this.lbisdate.Size = new System.Drawing.Size(42, 18);
-            this.lbisdate.TabIndex = 35;
-            this.lbisdate.Text = "[???]";
+            this.lbFees.Text = "[$$$]";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(24, 127);
+            this.label15.Location = new System.Drawing.Point(24, 100);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(156, 19);
             this.label15.TabIndex = 34;
             this.label15.Text = "Application Fees :";
             // 
-            // label14
+            // lbReplacedID
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(24, 96);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 19);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Issue Date :";
-            // 
-            // lbLID
-            // 
-            this.lbLID.AutoSize = true;
-            this.lbLID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLID.Location = new System.Drawing.Point(621, 41);
-            this.lbLID.Name = "lbLID";
-            this.lbLID.Size = new System.Drawing.Size(42, 18);
-            this.lbLID.TabIndex = 32;
-            this.lbLID.Text = "[???]";
+            this.lbReplacedID.AutoSize = true;
+            this.lbReplacedID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReplacedID.Location = new System.Drawing.Point(640, 40);
+            this.lbReplacedID.Name = "lbReplacedID";
+            this.lbReplacedID.Size = new System.Drawing.Size(42, 18);
+            this.lbReplacedID.TabIndex = 32;
+            this.lbReplacedID.Text = "[???]";
             // 
             // label10
             // 
@@ -333,9 +218,9 @@
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(427, 40);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 19);
+            this.label10.Size = new System.Drawing.Size(183, 19);
             this.label10.TabIndex = 31;
-            this.label10.Text = "Renew License ID:";
+            this.label10.Text = "Replaced License ID:";
             // 
             // lbApplicationDate
             // 
@@ -375,7 +260,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(162, 19);
             this.label13.TabIndex = 27;
-            this.label13.Text = "R.L.Application ID :";
+            this.label13.Text = "L.R.Application ID :";
             // 
             // groupBox2
             // 
@@ -406,10 +291,10 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(39, 87);
+            this.groupBox2.Location = new System.Drawing.Point(51, 122);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(822, 272);
-            this.groupBox2.TabIndex = 8;
+            this.groupBox2.Size = new System.Drawing.Size(822, 284);
+            this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Driving License Info";
             // 
@@ -688,19 +573,18 @@
             this.gbFilter.Controls.Add(this.pictureBox1);
             this.gbFilter.Controls.Add(this.textBox1);
             this.gbFilter.Controls.Add(this.label3);
-            this.gbFilter.Location = new System.Drawing.Point(117, 3);
+            this.gbFilter.Location = new System.Drawing.Point(90, 13);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(696, 78);
-            this.gbFilter.TabIndex = 7;
+            this.gbFilter.Size = new System.Drawing.Size(568, 103);
+            this.gbFilter.TabIndex = 13;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
-            this.gbFilter.Enter += new System.EventHandler(this.gbFilter_Enter);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(486, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(463, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -725,19 +609,55 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "License ID :";
             // 
-            // UC_RenewLicenseApplication
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdLost);
+            this.groupBox1.Controls.Add(this.rdDamaged);
+            this.groupBox1.Location = new System.Drawing.Point(678, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(181, 102);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Replacement For";
+            // 
+            // rdLost
+            // 
+            this.rdLost.AutoSize = true;
+            this.rdLost.Location = new System.Drawing.Point(26, 60);
+            this.rdLost.Name = "rdLost";
+            this.rdLost.Size = new System.Drawing.Size(103, 20);
+            this.rdLost.TabIndex = 1;
+            this.rdLost.TabStop = true;
+            this.rdLost.Text = "Lost License";
+            this.rdLost.UseVisualStyleBackColor = true;
+            this.rdLost.CheckedChanged += new System.EventHandler(this.rdLost_CheckedChanged);
+            // 
+            // rdDamaged
+            // 
+            this.rdDamaged.AutoSize = true;
+            this.rdDamaged.Location = new System.Drawing.Point(26, 25);
+            this.rdDamaged.Name = "rdDamaged";
+            this.rdDamaged.Size = new System.Drawing.Size(139, 20);
+            this.rdDamaged.TabIndex = 0;
+            this.rdDamaged.TabStop = true;
+            this.rdDamaged.Text = "Damaged License";
+            this.rdDamaged.UseVisualStyleBackColor = true;
+            this.rdDamaged.CheckedChanged += new System.EventHandler(this.rdDamaged_CheckedChanged);
+            // 
+            // UC_Replacement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.linkShowLicenseInfo);
             this.Controls.Add(this.linkShowhistory);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbFilter);
-            this.Name = "UC_RenewLicenseApplication";
-            this.Size = new System.Drawing.Size(954, 685);
-            this.Load += new System.EventHandler(this.UC_RenewLicenseApplication_Load);
+            this.Name = "UC_Replacement";
+            this.Size = new System.Drawing.Size(954, 626);
+            this.Load += new System.EventHandler(this.UC_Replacement_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -746,6 +666,8 @@
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -759,15 +681,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lbCreateddBy;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label lbExpDate;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label lbOldLicnseID;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lbFees;
-        private System.Windows.Forms.Label lbisdate;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lbLID;
+        private System.Windows.Forms.Label lbReplacedID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbApplicationDate;
         private System.Windows.Forms.Label label12;
@@ -805,11 +723,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNotes;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label lbTotalFees;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label lbLicenseFees;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdLost;
+        private System.Windows.Forms.RadioButton rdDamaged;
     }
 }

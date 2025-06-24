@@ -108,14 +108,14 @@
             // localToolStripMenuItem
             // 
             this.localToolStripMenuItem.Name = "localToolStripMenuItem";
-            this.localToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.localToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
             this.localToolStripMenuItem.Text = "Local";
             this.localToolStripMenuItem.Click += new System.EventHandler(this.localToolStripMenuItem_Click);
             // 
             // internationalToolStripMenuItem
             // 
             this.internationalToolStripMenuItem.Name = "internationalToolStripMenuItem";
-            this.internationalToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
+            this.internationalToolStripMenuItem.Size = new System.Drawing.Size(107, 26);
             this.internationalToolStripMenuItem.Text = "International";
             this.internationalToolStripMenuItem.Click += new System.EventHandler(this.internationalToolStripMenuItem_Click);
             // 

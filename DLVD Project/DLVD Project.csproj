@@ -98,6 +98,12 @@
     <Compile Include="ApplicationUC\UC_RenewLicenseApplication.Designer.cs">
       <DependentUpon>UC_RenewLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationUC\UC_Replacement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUC\UC_Replacement.Designer.cs">
+      <DependentUpon>UC_Replacement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationUC\UC_StreetTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +223,12 @@
     </Compile>
     <Compile Include="Driving_License\frmRenewDrivingLicense.Designer.cs">
       <DependentUpon>frmRenewDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driving_License\frmReplacementLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driving_License\frmReplacementLicense.Designer.cs">
+      <DependentUpon>frmReplacementLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Driving_License\frmStreetTestAppointments.cs">
       <SubType>Form</SubType>
@@ -368,6 +380,9 @@
     <EmbeddedResource Include="ApplicationUC\UC_RenewLicenseApplication.resx">
       <DependentUpon>UC_RenewLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUC\UC_Replacement.resx">
+      <DependentUpon>UC_Replacement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationUC\UC_StreetTest.resx">
       <DependentUpon>UC_StreetTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmRenewDrivingLicense.resx">
       <DependentUpon>frmRenewDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driving_License\frmReplacementLicense.resx">
+      <DependentUpon>frmReplacementLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driving_License\frmStreetTestAppointments.resx">
       <DependentUpon>frmStreetTestAppointments.cs</DependentUpon>

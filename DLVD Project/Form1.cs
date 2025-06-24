@@ -104,5 +104,11 @@ namespace DLVD_Project
             frmRenewDrivingLicense frm = new frmRenewDrivingLicense();
             frm.ShowDialog();
         }
+
+        private void replacementOrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReplacementLicense frm = new frmReplacementLicense();
+            frm.ShowDialog();
+        }
     }
 }
