@@ -50,7 +50,7 @@ namespace DataLayer
             return isfound;
 
         }
-
+        
         public static int AddNewLicenceDL(int applicationID, int driverID, int licenseClass, DateTime issueDate, DateTime expirationDate, string notes, decimal paidFees, bool isActive, int issueReason, int createdByUserID)
         {
             int newID = -1;
@@ -84,6 +84,48 @@ namespace DataLayer
             }
 
             return newID;
+        }
+
+        public static bool UpdateLicenseDL(int licenseID, int applicationID, int driverID, int licenseClass, DateTime issueDate, DateTime expirationDate, string notes, decimal paidFees, bool isActive, int issueReason, int createdByUserID)
+        {
+            bool isUpdated = false;
+
+            using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
+            {
+                string query = @"UPDATE Licenses
+                         SET ApplicationID = @ApplicationID,
+                             DriverID = @DriverID,
+                             LicenseClass = @LicenseClass,
+                             IssueDate = @IssueDate,
+                             ExpirationDate = @ExpirationDate,
+                             Notes = @Notes,
+                             PaidFees = @PaidFees,
+                             IsActive = @IsActive,
+                             IssueReason = @IssueReason,
+                             CreatedByUserID = @CreatedByUserID
+                         WHERE LicenseID = @LicenseID";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@LicenseID", licenseID);
+                cmd.Parameters.AddWithValue("@ApplicationID", applicationID);
+                cmd.Parameters.AddWithValue("@DriverID", driverID);
+                cmd.Parameters.AddWithValue("@LicenseClass", licenseClass);
+                cmd.Parameters.AddWithValue("@IssueDate", issueDate);
+                cmd.Parameters.AddWithValue("@ExpirationDate", expirationDate);
+                cmd.Parameters.AddWithValue("@Notes", string.IsNullOrEmpty(notes) ? (object)DBNull.Value : notes);
+                cmd.Parameters.AddWithValue("@PaidFees", paidFees);
+                cmd.Parameters.AddWithValue("@IsActive", isActive);
+                cmd.Parameters.AddWithValue("@IssueReason", issueReason);
+                cmd.Parameters.AddWithValue("@CreatedByUserID", createdByUserID);
+
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                isUpdated = (rowsAffected > 0);
+            }
+
+            return isUpdated;
         }
 
 

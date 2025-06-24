@@ -57,5 +57,18 @@ namespace BusinessLayer
                 return "";
         }
 
+        public static decimal GetClassFees(int ClassID)
+        {
+            decimal ClassFees = 0;
+
+            if (clsLicenseClassDl.GetClassFeesDl(ref ClassFees, ClassID))
+            {
+                return ClassFees;
+            }
+            else
+                return -1;
+        }
+
+
     }
 }

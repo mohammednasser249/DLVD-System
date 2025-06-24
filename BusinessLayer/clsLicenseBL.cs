@@ -146,12 +146,32 @@ namespace BusinessLayer
             return false;
         }
 
+        private bool _UpdateLicense()
+        {
+            return clsLicenseDL.UpdateLicenseDL(this.LicenseID,this.ApplicationID, this.DriverID, this.LicenseClass, this.IssueDate, this.ExpirationDate, this.Notes, this.PaidFees, this.IsActive, this.IssueReason, this.CreatedByUserID);
+        }
 
 
         public bool Save()
         {
-            if(_AddNewLicence())
-                return true;
+
+            switch(Mode)
+            {
+                case enMode.AddNew:
+                    if(_AddNewLicence())
+                    {
+                        
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    break;
+                case enMode.Update:
+                    return _UpdateLicense();
+                
+
+            }
+
+            
             return false;
         }
 

@@ -62,23 +62,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lbCreateddBy = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lbExpDate = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lbLocallicneseId = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lbFees = new System.Windows.Forms.Label();
+            this.lbisdate = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.lbLID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbApplicationDate = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbApplicatoinId = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lbisdate = new System.Windows.Forms.Label();
-            this.lbFees = new System.Windows.Forms.Label();
-            this.lbLocallicneseId = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lbExpDate = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.lbCreateddBy = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
             this.linkShowhistory = new System.Windows.Forms.LinkLabel();
             this.linkShowLicenseInfo = new System.Windows.Forms.LinkLabel();
@@ -462,6 +462,106 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Application info";
             // 
+            // lbCreateddBy
+            // 
+            this.lbCreateddBy.AutoSize = true;
+            this.lbCreateddBy.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCreateddBy.Location = new System.Drawing.Point(579, 145);
+            this.lbCreateddBy.Name = "lbCreateddBy";
+            this.lbCreateddBy.Size = new System.Drawing.Size(42, 18);
+            this.lbCreateddBy.TabIndex = 42;
+            this.lbCreateddBy.Text = "[???]";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(428, 145);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(110, 19);
+            this.label28.TabIndex = 41;
+            this.label28.Text = "Created By :";
+            // 
+            // lbExpDate
+            // 
+            this.lbExpDate.AutoSize = true;
+            this.lbExpDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbExpDate.Location = new System.Drawing.Point(579, 107);
+            this.lbExpDate.Name = "lbExpDate";
+            this.lbExpDate.Size = new System.Drawing.Size(42, 18);
+            this.lbExpDate.TabIndex = 40;
+            this.lbExpDate.Text = "[???]";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(428, 107);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(141, 19);
+            this.label26.TabIndex = 39;
+            this.label26.Text = "Expiration Date :";
+            // 
+            // lbLocallicneseId
+            // 
+            this.lbLocallicneseId.AutoSize = true;
+            this.lbLocallicneseId.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLocallicneseId.Location = new System.Drawing.Point(595, 70);
+            this.lbLocallicneseId.Name = "lbLocallicneseId";
+            this.lbLocallicneseId.Size = new System.Drawing.Size(42, 18);
+            this.lbLocallicneseId.TabIndex = 38;
+            this.lbLocallicneseId.Text = "[???]";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(428, 70);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(152, 19);
+            this.label24.TabIndex = 37;
+            this.label24.Text = "Local Licnese ID :";
+            // 
+            // lbFees
+            // 
+            this.lbFees.AutoSize = true;
+            this.lbFees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFees.Location = new System.Drawing.Point(199, 146);
+            this.lbFees.Name = "lbFees";
+            this.lbFees.Size = new System.Drawing.Size(24, 18);
+            this.lbFees.TabIndex = 36;
+            this.lbFees.Text = "50";
+            // 
+            // lbisdate
+            // 
+            this.lbisdate.AutoSize = true;
+            this.lbisdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbisdate.Location = new System.Drawing.Point(199, 108);
+            this.lbisdate.Name = "lbisdate";
+            this.lbisdate.Size = new System.Drawing.Size(42, 18);
+            this.lbisdate.TabIndex = 35;
+            this.lbisdate.Text = "[???]";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(24, 145);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 19);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Fees :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(24, 107);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(104, 19);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Issue Date :";
+            // 
             // lbLID
             // 
             this.lbLID.AutoSize = true;
@@ -522,106 +622,6 @@
             this.label13.TabIndex = 27;
             this.label13.Text = "D L.Application ID :";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(24, 107);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 19);
-            this.label14.TabIndex = 33;
-            this.label14.Text = "Issue Date :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(24, 145);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 19);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "Fees :";
-            // 
-            // lbisdate
-            // 
-            this.lbisdate.AutoSize = true;
-            this.lbisdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbisdate.Location = new System.Drawing.Point(199, 108);
-            this.lbisdate.Name = "lbisdate";
-            this.lbisdate.Size = new System.Drawing.Size(42, 18);
-            this.lbisdate.TabIndex = 35;
-            this.lbisdate.Text = "[???]";
-            // 
-            // lbFees
-            // 
-            this.lbFees.AutoSize = true;
-            this.lbFees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFees.Location = new System.Drawing.Point(199, 146);
-            this.lbFees.Name = "lbFees";
-            this.lbFees.Size = new System.Drawing.Size(24, 18);
-            this.lbFees.TabIndex = 36;
-            this.lbFees.Text = "50";
-            // 
-            // lbLocallicneseId
-            // 
-            this.lbLocallicneseId.AutoSize = true;
-            this.lbLocallicneseId.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLocallicneseId.Location = new System.Drawing.Point(595, 70);
-            this.lbLocallicneseId.Name = "lbLocallicneseId";
-            this.lbLocallicneseId.Size = new System.Drawing.Size(42, 18);
-            this.lbLocallicneseId.TabIndex = 38;
-            this.lbLocallicneseId.Text = "[???]";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(428, 70);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(152, 19);
-            this.label24.TabIndex = 37;
-            this.label24.Text = "Local Licnese ID :";
-            // 
-            // lbExpDate
-            // 
-            this.lbExpDate.AutoSize = true;
-            this.lbExpDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbExpDate.Location = new System.Drawing.Point(579, 107);
-            this.lbExpDate.Name = "lbExpDate";
-            this.lbExpDate.Size = new System.Drawing.Size(42, 18);
-            this.lbExpDate.TabIndex = 40;
-            this.lbExpDate.Text = "[???]";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(428, 107);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(141, 19);
-            this.label26.TabIndex = 39;
-            this.label26.Text = "Expiration Date :";
-            // 
-            // lbCreateddBy
-            // 
-            this.lbCreateddBy.AutoSize = true;
-            this.lbCreateddBy.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreateddBy.Location = new System.Drawing.Point(579, 145);
-            this.lbCreateddBy.Name = "lbCreateddBy";
-            this.lbCreateddBy.Size = new System.Drawing.Size(42, 18);
-            this.lbCreateddBy.TabIndex = 42;
-            this.lbCreateddBy.Text = "[???]";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(428, 145);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(110, 19);
-            this.label28.TabIndex = 41;
-            this.label28.Text = "Created By :";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(763, 627);
@@ -654,6 +654,7 @@
             this.linkShowLicenseInfo.TabIndex = 6;
             this.linkShowLicenseInfo.TabStop = true;
             this.linkShowLicenseInfo.Text = "Show License Info";
+            this.linkShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkShowLicenseInfo_LinkClicked);
             // 
             // UC_InternatinalLicneseApplicationInfo
             // 

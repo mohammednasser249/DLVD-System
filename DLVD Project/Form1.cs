@@ -98,5 +98,17 @@ namespace DLVD_Project
             frmNewNational_License_Application frm = new frmNewNational_License_Application();
             frm.ShowDialog();
         }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRenewDrivingLicense frm = new frmRenewDrivingLicense();
+            frm.ShowDialog();
+        }
+
+        private void replacementOrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReplacementLicense frm = new frmReplacementLicense();
+            frm.ShowDialog();
+        }
     }
 }
