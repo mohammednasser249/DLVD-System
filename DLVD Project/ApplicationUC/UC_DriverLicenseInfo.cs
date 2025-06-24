@@ -87,6 +87,13 @@ namespace DLVD_Project.ApplicationUC
             }
             lbDriverID.Text =clsDriver.GetDriverId(Application.ApplicantPersonID).ToString();
 
+            if(clsDetainedLicensesBl.isLicenseDetained(License.LicenseID))
+            {
+                lbIsDetained.Text = "Yes";
+            }else
+                lbIsDetained.Text = "NO";
+
+
 
 
 

@@ -119,3 +119,7 @@ C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Applicat
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmRenewDrivingLicense.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_Replacement.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmReplacementLicense.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_DetainLicense.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmDetainLicense.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_ReleaseLiecense.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmReleaseLicense.resources
