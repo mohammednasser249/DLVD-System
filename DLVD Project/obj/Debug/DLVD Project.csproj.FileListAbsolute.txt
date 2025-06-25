@@ -123,3 +123,4 @@ C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Applicat
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmDetainLicense.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.ApplicationUC.UC_ReleaseLiecense.resources
 C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmReleaseLicense.resources
+C:\Users\Asus\Desktop\Projects\DLVD\DLVD Project\obj\Debug\DLVD_Project.Driving_License.frmDetainedLicenses.resources

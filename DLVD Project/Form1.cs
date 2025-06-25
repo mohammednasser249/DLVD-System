@@ -122,5 +122,11 @@ namespace DLVD_Project
             frmReleaseLicense frm = new frmReleaseLicense();
             frm.ShowDialog();
         }
+
+        private void manageDetainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDetainedLicenses frm = new frmDetainedLicenses();
+            frm.ShowDialog();
+        }
     }
 }

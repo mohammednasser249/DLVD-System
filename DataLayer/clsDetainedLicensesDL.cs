@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -45,49 +46,49 @@ namespace DataLayer
             return isFound;
         }
 
-public static bool FindByLicsenseDL(int licensesID, ref int  detainedID , ref DateTime detainDate, ref decimal fineFees, ref int createdByUser, ref int isReleased, ref DateTime releaseDate, ref int releasedByUserID, ref int releaseApplicatoinID)
-{
-    bool isfound = false;
+        public static bool FindByLicsenseDL(int licensesID, ref int detainedID, ref DateTime detainDate, ref decimal fineFees, ref int createdByUser, ref int isReleased, ref DateTime releaseDate, ref int releasedByUserID, ref int releaseApplicatoinID)
+        {
+            bool isfound = false;
 
-    using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
-    {
-        string query = @"
+            using (SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection))
+            {
+                string query = @"
             SELECT * 
             FROM DetainedLicenses 
             WHERE LicenseID = @licensesID and IsReleased=0";
 
-        SqlCommand cmd = new SqlCommand(query, conn);
-        cmd.Parameters.AddWithValue("@licensesID", licensesID);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@licensesID", licensesID);
 
-        try
-        {
-            conn.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-            if (reader.Read())
-            {
-                detainedID = Convert.ToInt32(reader["DetainID"]);
+                    if (reader.Read())
+                    {
+                        detainedID = Convert.ToInt32(reader["DetainID"]);
 
-                detainDate = reader["DetainDate"] != DBNull.Value ? Convert.ToDateTime(reader["DetainDate"]) : DateTime.MinValue;
-                fineFees = reader["FineFees"] != DBNull.Value ? Convert.ToDecimal(reader["FineFees"]) : 0;
-                createdByUser = reader["CreatedByUserID"] != DBNull.Value ? Convert.ToInt32(reader["CreatedByUserID"]) : -1;
-                isReleased = reader["IsReleased"] != DBNull.Value ? Convert.ToInt32(reader["IsReleased"]) : 0;
-                releaseDate = reader["ReleaseDate"] != DBNull.Value ? Convert.ToDateTime(reader["ReleaseDate"]) : DateTime.MinValue;
-                releasedByUserID = reader["ReleasedByUserID"] != DBNull.Value ? Convert.ToInt32(reader["ReleasedByUserID"]) : -1;
-                releaseApplicatoinID = reader["ReleaseApplicationID"] != DBNull.Value ? Convert.ToInt32(reader["ReleaseApplicationID"]) : -1;
+                        detainDate = reader["DetainDate"] != DBNull.Value ? Convert.ToDateTime(reader["DetainDate"]) : DateTime.MinValue;
+                        fineFees = reader["FineFees"] != DBNull.Value ? Convert.ToDecimal(reader["FineFees"]) : 0;
+                        createdByUser = reader["CreatedByUserID"] != DBNull.Value ? Convert.ToInt32(reader["CreatedByUserID"]) : -1;
+                        isReleased = reader["IsReleased"] != DBNull.Value ? Convert.ToInt32(reader["IsReleased"]) : 0;
+                        releaseDate = reader["ReleaseDate"] != DBNull.Value ? Convert.ToDateTime(reader["ReleaseDate"]) : DateTime.MinValue;
+                        releasedByUserID = reader["ReleasedByUserID"] != DBNull.Value ? Convert.ToInt32(reader["ReleasedByUserID"]) : -1;
+                        releaseApplicatoinID = reader["ReleaseApplicationID"] != DBNull.Value ? Convert.ToInt32(reader["ReleaseApplicationID"]) : -1;
                         isfound = true;
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
             }
 
-            reader.Close();
+            return isfound;
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error: " + ex.Message);
-        }
-    }
-
-    return isfound;
-}
 
 
         public static int AddnewDetainedLicenseDL(int licensesID, DateTime detainDate, decimal fineFees, int createdByUser, int isReleased, DateTime? releaseDate, int? releasedByUserID, int? releaseApplicatoinID)
@@ -180,6 +181,41 @@ values (@licensesID,@detainDate,@fineFees,@createdByUser,@isReleased,@releaseDat
             }
         }
 
+        public static DataTable GetAllDetainedLicensesDL()
+        {
+            DataTable dt = new DataTable();
 
+            SqlConnection conn = new SqlConnection(clsDatabaseSettings.StringConnection);
+
+            string qurey = @"
+select D.DetainID,D.LicenseID,D.DetainDate,D.IsReleased,D.FineFees,D.ReleaseDate,P.NationalNo, FullName = P.FirstName +' '+P.SecondName+' '+P.ThirdName+' '+P.LastName ,D.ReleaseApplicationID
+from DetainedLicenses D,Applications A , Licenses L,People P
+where D.LicenseID=L.LicenseID and L.ApplicationID=A.ApplicationID and P.PersonID=A.ApplicantPersonID
+";
+
+            SqlCommand cmd = new SqlCommand(qurey, conn);
+
+            try
+            {
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                dt.Load(reader);
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
     }
 }
